@@ -3,122 +3,145 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Արթուր & Լիլիթ — Հարսանեկան հրավիրատոմս</title>
+<title>Արթուր & Լիլիթ</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
 
 <style>
+* {
+  box-sizing: border-box;
+}
+
 body {
-    margin: 0;
-    font-family: 'Montserrat', sans-serif;
-    background: url("https://images.unsplash.com/photo-1520857014576-2c4f4c972b57") center/cover no-repeat;
-    min-height: 100vh;
-    color: #fff;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  color: #fff;
 }
 
-.overlay {
-    background: rgba(0, 0, 0, 0.55);
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 30px;
+/* HERO */
+.hero {
+  min-height: 100vh;
+  background: url("https://images.unsplash.com/photo-1529634898324-4ce5b1a45f06") center/cover no-repeat;
+  position: relative;
 }
 
-.invite {
-    max-width: 600px;
-    text-align: center;
-    border: 1px solid rgba(255,255,255,0.4);
-    padding: 40px 25px;
-    backdrop-filter: blur(6px);
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
 }
 
 .names {
-    font-family: 'Playfair Display', serif;
-    font-size: 36px;
-    letter-spacing: 2px;
-    margin-bottom: 10px;
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  letter-spacing: 3px;
+  margin-bottom: 15px;
+}
+
+.line {
+  width: 80px;
+  height: 1px;
+  background: #fff;
+  margin: 20px 0;
 }
 
 .subtitle {
-    font-size: 14px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    margin-bottom: 30px;
-}
-
-.text {
-    font-size: 16px;
-    line-height: 1.8;
-    margin-bottom: 30px;
+  font-size: 14px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
 }
 
 .date {
-    font-size: 18px;
-    margin-bottom: 25px;
+  font-size: 18px;
 }
 
-.schedule {
-    border-top: 1px solid rgba(255,255,255,0.3);
-    padding-top: 25px;
+/* SECTION */
+.section {
+  background: #111;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  margin-bottom: 40px;
+  letter-spacing: 2px;
 }
 
 .event {
-    margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .time {
-    font-weight: 600;
-    font-size: 18px;
+  font-size: 22px;
+  font-weight: 600;
 }
 
 .place {
-    font-size: 15px;
-    opacity: 0.9;
+  font-size: 16px;
+  opacity: 0.8;
+  margin-top: 5px;
 }
 
 .footer {
-    margin-top: 30px;
-    font-size: 14px;
-    opacity: 0.85;
+  font-size: 14px;
+  opacity: 0.7;
+  margin-top: 50px;
+}
+
+@media (max-width: 600px) {
+  .names {
+    font-size: 36px;
+  }
 }
 </style>
 </head>
 
 <body>
-<div class="overlay">
-    <div class="invite">
 
-        <div class="subtitle">Հարսանեկան հրավիրատոմս</div>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="subtitle">Հարսանեկան հրավիրատոմս</div>
+    <div class="names">Արթուր & Լիլիթ</div>
+    <div class="line"></div>
+    <div class="date">15 Նոյեմբեր, 2026</div>
+  </div>
+</section>
 
-        <div class="names">Արթուր & Լիլիթ</div>
+<!-- DETAILS -->
+<section class="section">
+  <h2>Ծրագրի մանրամասներ</h2>
 
-        <div class="text">
-            Սիրով հրավիրում ենք Ձեզ<br>
-            մասնակցելու մեր կյանքի կարևոր օրվան
-        </div>
+  <div class="event">
+    <div class="time">15։00</div>
+    <div class="place">Եկեղեցի</div>
+  </div>
 
-        <div class="date">
-            📅 15 Նոյեմբեր, 2026
-        </div>
+  <div class="event">
+    <div class="time">18։00</div>
+    <div class="place">Սրահ</div>
+  </div>
 
-        <div class="schedule">
-            <div class="event">
-                <div class="time">15։00</div>
-                <div class="place">Եկեղեցի</div>
-            </div>
+  <div class="footer">
+    Սիրով սպասում ենք Ձեզ մեր կյանքի կարևոր օրը ✨
+  </div>
+</section>
 
-            <div class="event">
-                <div class="time">18։00</div>
-                <div class="place">Սրահ</div>
-            </div>
-        </div>
-
-        <div class="footer">
-            Սպասում ենք Ձեզ սիրով 💖
-        </div>
-
-    </div>
-</div>
 </body>
 </html>
