@@ -116,10 +116,18 @@ function drawHeart(){
 
 drawHeart();
 
-/* Scratch effect */
-canvas.addEventListener("mousedown", ()=> isDrawing = true);
-canvas.addEventListener("mouseup", ()=> isDrawing = false);
-canvas.addEventListener("mouseleave", ()=> isDrawing = false);
+/* ---- UNIVERSAL SCRATCH FUNCTION ---- */
+function scratch(x, y){
+    ctx.globalCompositeOperation = "destination-out";
+    ctx.beginPath();
+    ctx.arc(x, y, 18, 0, Math.PI * 2);
+    ctx.fill();
+}
+
+/* ---- MOUSE EVENTS ---- */
+canvas.addEventListener("mousedown", () => isDrawing = true);
+canvas.addEventListener("mouseup", () => isDrawing = false);
+canvas.addEventListener("mouseleave", () => isDrawing = false);
 
 canvas.addEventListener("mousemove", function(e){
     if(!isDrawing) return;
@@ -128,11 +136,32 @@ canvas.addEventListener("mousemove", function(e){
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
 
-    ctx.globalCompositeOperation = "destination-out";
-    ctx.beginPath();
-    ctx.arc(x, y, 15, 0, Math.PI * 2);
-    ctx.fill();
+    scratch(x, y);
 });
+
+/* ---- TOUCH EVENTS (FOR PHONE) ---- */
+canvas.addEventListener("touchstart", function(e){
+    e.preventDefault();
+    isDrawing = true;
+});
+
+canvas.addEventListener("touchend", function(){
+    isDrawing = false;
+});
+
+canvas.addEventListener("touchmove", function(e){
+    e.preventDefault();
+    if(!isDrawing) return;
+
+    const rect = canvas.getBoundingClientRect();
+    const touch = e.touches[0];
+
+    const x = touch.clientX - rect.left;
+    const y = touch.clientY - rect.top;
+
+    scratch(x, y);
+});
+
 </script>
 
 </body>
