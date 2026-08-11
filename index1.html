@@ -40,8 +40,8 @@
       background-image: url("./welcome-bg.webp");
       background-size: cover;
       background-position: center center;
-      padding-top: 80px;
-      padding-bottom: 48px;
+      /* padding-top: 80px;
+      padding-bottom: 48px; */
       font-family: "DejaVu Serif Condensed", Georgia, serif;
     }
 
@@ -419,68 +419,36 @@
        JAVASCRIPT
   ========================= -->
 
-  <script>
+<script>
   const section = document.querySelector(".car-scroll-section");
   const car = document.querySelector(".car");
 
   function handleScroll() {
-
     const rect = section.getBoundingClientRect();
 
     const sectionHeight = section.offsetHeight;
     const windowHeight = window.innerHeight;
 
-    /*
-     * Որքան ենք մտել 2-րդ section
-     */
-    const start = -rect.top;
+    // Section-ի scroll progress-ը
+    const totalScroll = sectionHeight - windowHeight;
 
-    /*
-     * 2-րդ section-ի ամբողջ scroll տարածքը
-     */
-    const total = sectionHeight - windowHeight;
-
-    /*
-     * 0 → 1
-     */
-    let progress = start / total;
+    let progress = -rect.top / totalScroll;
 
     progress = Math.max(0, Math.min(1, progress));
 
+    // Մեքենայի շարժման սահմանները
+    const startY = -500;
+    const endY = 500;
 
-    /*
-     * =========================
-     * CAR POSITION
-     * =========================
-     *
-     * Սկզբում՝ վերևում
-     * Վերջում՝ ներքևում
-     */
-
-    const startY = -1000;
-    const endY = 1100;
-
-    const y =
-      startY +
-      (endY - startY) * progress;
-
-
-    /*
-     * =========================
-     * CAR
-     * =========================
-     */
+    const y = startY + (endY - startY) * progress;
 
     car.style.transform = `
-      translate(
-        -50%,
-        calc(-50% + ${y}px)
-      )
+      translate(-50%, calc(-50% + ${y}px))
     `;
   }
 
-
   window.addEventListener("scroll", handleScroll);
+  window.addEventListener("resize", handleScroll);
 
   handleScroll();
 </script>
