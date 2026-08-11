@@ -24,7 +24,7 @@ body{
 .container{
     width:360px;
     height:700px;
-    background:#f3f3f6;
+    background:#fff;
     border-radius:40px;
     text-align:center;
     padding-top:60px;
@@ -67,7 +67,7 @@ canvas{
 
 .hidden-text{
     position:absolute;
-    top:50%;
+    top:45%;
     left:50%;
     transform:translate(-50%,-50%);
     text-align:center;
@@ -84,6 +84,11 @@ canvas{
     color:#666;
     letter-spacing:2px;
 }
+.names p{
+    font-size:14px; 
+    margin-top: 25px;
+    color: #d3d3d3;
+}
 </style>
 </head>
 
@@ -91,9 +96,9 @@ canvas{
 
 <div class="container">
 
-    <div class="title">
+    <!-- <div class="title">
         ՀԱՐՍԱՆԵԿԱՆ ՀՐԱՎԻՐԱՏՈՄՍ
-    </div>
+    </div> -->
 
     <div class="heart-wrapper">
 
@@ -106,9 +111,10 @@ canvas{
 
     </div>
 
-    <div class="names">
+    <!-- <div class="names">
         ԱՐԹՈՒՐ & ԼԻԼԻԹ
-    </div>
+        <p>ՋՆՋԵՔ ՍԻՐՏԸ ⬆</p>
+    </div> -->
 
 </div>
 
@@ -117,28 +123,6 @@ const canvas = document.getElementById("scratchCanvas");
 const ctx = canvas.getContext("2d");
 
 let isDrawing = false;
-
-// /* ---------- Sparkles ---------- */
-// function drawSparkles(x, y, size){
-
-//     for(let i = 0; i < 1000; i++){
-
-//         let angle = Math.random() * Math.PI * 2;
-//         let radius = Math.random() * size * 1.5 - 200;
-
-//         let sparkleX = x + Math.cos(angle) * radius;
-//         let sparkleY = y + Math.sin(angle) * radius;
-
-//         ctx.beginPath();
-//         ctx.arc(sparkleX, sparkleY, Math.random()*2 + 1, 0, Math.PI*2);
-
-//         ctx.fillStyle = "white";
-//         ctx.globalAlpha = Math.random();
-//         ctx.fill();
-//     }
-
-//     ctx.globalAlpha = 1;
-// }
 
 function drawSparkles(x, y){
 
@@ -190,12 +174,12 @@ function drawHeart(){
     let w = canvas.width;
     let h = canvas.height;
 
-    let gradient = ctx.createLinearGradient(0,0,w,h);
-    gradient.addColorStop(0, "#ffdc73");   // շատ բաց ոսկեգույն
-    gradient.addColorStop(0.25, "#ffcf40"); // gold
-    gradient.addColorStop(0.5, "#ffbf00"); // gold
-    gradient.addColorStop(0.75, "#bf9b30"); // խոր ոսկեգույն
-    gradient.addColorStop(1, "#a67c00");   // մուգ ոսկեգույն
+    let gradient = ctx.createLinearGradient(120,0,w,h);
+    // gradient.addColorStop(0.8, "#c99228");   // շատ բաց ոսկեգույն
+    gradient.addColorStop(0.6, "#b8860b"); // gold
+    gradient.addColorStop(0.4, "#f5e27a"); // gold
+    gradient.addColorStop(0.2, "#f5e27a"); // gold
+    gradient.addColorStop(0, "#c99228"); // խոր ոսկեգույն
 
     
 
