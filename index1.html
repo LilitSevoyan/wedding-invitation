@@ -113,7 +113,7 @@
 
     .car-scroll-section {
       position: relative;
-      height: 250vh;
+      height: 100vh;
     }
     /* =========================
        STICKY
@@ -419,36 +419,53 @@
        JAVASCRIPT
   ========================= -->
 
-<script>
+  <script>
   const section = document.querySelector(".car-scroll-section");
   const car = document.querySelector(".car");
 
   function handleScroll() {
+
     const rect = section.getBoundingClientRect();
 
-    const sectionHeight = section.offsetHeight;
-    const windowHeight = window.innerHeight;
+    /*
+     * Section-ը մտնում է viewport
+     * 0 → սկզբում
+     * 1 → section-ի վերջում
+     */
 
-    // Section-ի scroll progress-ը
-    const totalScroll = sectionHeight - windowHeight;
-
-    let progress = -rect.top / totalScroll;
+    let progress =
+      (window.innerHeight - rect.top - 400) /
+      (window.innerHeight + rect.height - 400);
 
     progress = Math.max(0, Math.min(1, progress));
 
-    // Մեքենայի շարժման սահմանները
-    const startY = -500;
-    const endY = 500;
 
-    const y = startY + (endY - startY) * progress;
+    /*
+     * CAR MOVEMENT
+     */
+
+    const startY = -1000;
+    const endY = 1000;
+
+    const y =
+      startY +
+      (endY - startY) * progress;
+
+
+    /*
+     * CAR
+     */
 
     car.style.transform = `
-      translate(-50%, calc(-50% + ${y}px))
+      translate(
+        -50%,
+        calc(-50% + ${y}px)
+      )
     `;
   }
 
+
   window.addEventListener("scroll", handleScroll);
-  window.addEventListener("resize", handleScroll);
 
   handleScroll();
 </script>
