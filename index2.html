@@ -200,10 +200,14 @@
   z-index: 10;
 
   will-change: transform;
+
   transform: translate3d(-50%, -50%, 0);
 
   pointer-events: none;
+
   backface-visibility: hidden;
+
+  -webkit-backface-visibility: hidden;
 }
 
     /* =========================
@@ -428,19 +432,32 @@
 
   let ticking = false;
 
-  function updateCar() {
+  // Ներկայիս մեքենայի դիրքը
+  let currentY = -1000;
+
+  // Scroll-ից ստացված նպատակային դիրքը
+  let targetY = -1000;
+
+
+  /*
+   * =========================
+   * CALCULATE TARGET POSITION
+   * =========================
+   */
+
+  function updateTarget() {
 
     const rect = section.getBoundingClientRect();
 
+
     /*
-     * =========================
      * PROGRESS
-     * =========================
      */
 
     let progress =
       (window.innerHeight - rect.top - 400) /
       (window.innerHeight + rect.height - 400);
+
 
     progress = Math.max(
       0,
@@ -449,42 +466,80 @@
 
 
     /*
-     * =========================
      * CAR MOVEMENT
-     * =========================
      */
 
     const startY = -1000;
     const endY = 1000;
 
-    const y =
+
+    targetY =
       startY +
       (endY - startY) * progress;
 
-
-    /*
-     * =========================
-     * APPLY
-     * =========================
-     */
-
-    car.style.transform = `
-      translate3d(
-        -50%,
-        calc(-50% + ${y}px),
-        0
-      )
-    `;
 
     ticking = false;
   }
 
 
+  /*
+   * =========================
+   * SMOOTH ANIMATION
+   * =========================
+   */
+
+  function animateCar() {
+
+    /*
+     * Դանդաղ մոտեցնում ենք
+     * currentY-ը targetY-ին
+     */
+
+    currentY += (targetY - currentY) * 0.12;
+
+
+    /*
+     * Եթե շատ փոքր տարբերություն է,
+     * անմիջապես հավասարեցնում ենք
+     */
+
+    if (Math.abs(targetY - currentY) < 0.1) {
+      currentY = targetY;
+    }
+
+
+    /*
+     * APPLY
+     */
+
+    car.style.transform = `
+      translate3d(
+        -50%,
+        calc(-50% + ${currentY}px),
+        0
+      )
+    `;
+
+
+    /*
+     * Շարունակում ենք animation-ը
+     */
+
+    requestAnimationFrame(animateCar);
+  }
+
+
+  /*
+   * =========================
+   * SCROLL
+   * =========================
+   */
+
   function handleScroll() {
 
     if (!ticking) {
 
-      requestAnimationFrame(updateCar);
+      requestAnimationFrame(updateTarget);
 
       ticking = true;
     }
@@ -499,10 +554,13 @@
 
 
   /*
-   * Initial position
+   * INITIAL
    */
 
-  updateCar();
+  updateTarget();
+
+  animateCar();
+
 </script>
 </body>
 </html>
