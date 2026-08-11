@@ -425,34 +425,44 @@
 
   function handleScroll() {
 
-  const rect = section.getBoundingClientRect();
+    const rect = section.getBoundingClientRect();
 
-  const isMobile = window.innerWidth <= 768;
+    /*
+     * Section-ը մտնում է viewport
+     * 0 → սկզբում
+     * 1 → section-ի վերջում
+     */
 
-  const startOffset = isMobile ? 150 : 400;
+    let progress =
+      (window.innerHeight - rect.top - 400) /
+      (window.innerHeight + rect.height - 400);
 
-  let progress =
-    (window.innerHeight - rect.top - startOffset) /
-    (window.innerHeight + rect.height - startOffset);
-
-  progress = Math.max(0, Math.min(1, progress));
-
-
-  const startY = isMobile ? -500 : -1000;
-  const endY = isMobile ? 500 : 1000;
-
-  const y =
-    startY +
-    (endY - startY) * progress;
+    progress = Math.max(0, Math.min(1, progress));
 
 
-  car.style.transform = `
-    translate(
-      -50%,
-      calc(-50% + ${y}px)
-    )
-  `;
-}
+    /*
+     * CAR MOVEMENT
+     */
+
+    const startY = -1000;
+    const endY = 1000;
+
+    const y =
+      startY +
+      (endY - startY) * progress;
+
+
+    /*
+     * CAR
+     */
+
+    car.style.transform = `
+      translate(
+        -50%,
+        calc(-50% + ${y}px)
+      )
+    `;
+  }
 
 
   window.addEventListener("scroll", handleScroll);
