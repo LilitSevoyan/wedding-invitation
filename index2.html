@@ -194,22 +194,17 @@
     ========================= */
 
     .car {
-  position: absolute;
-  width: 500px;
-  left: 50%;
-  top: 50%;
-  z-index: 10;
-
-  will-change: transform;
-
-  transform: translate3d(-50%, -50%, 0);
-
-  pointer-events: none;
-
-  backface-visibility: hidden;
-
-  -webkit-backface-visibility: hidden;
-}
+      position: absolute;
+      width: 500px;
+      left: 50%;
+      top: 50%;
+      z-index: 10;
+      will-change: transform;
+      transform: translate3d(-50%, -50%, 0);
+      pointer-events: none;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+    }
 
     /* =========================
        MOBILE
@@ -264,7 +259,6 @@
       .car {
         width: 350px;
         max-width: 85vw;
-
         left: 50%;
         top: 50%;
       }
@@ -275,322 +269,192 @@
 <body>
 
   <div class="form-wrapper">
-
     <!-- =========================
          FIRST SECTION
     ========================= -->
-
     <section class="welcome-section">
-
       <div class="welcome-inner">
-
         <h2 class="welcome-title">
           Սիրելի՛ ընկերներ և բարեկամներ,
         </h2>
         <h2 class="welcome-title">
           kam harazatner
         </h2>
-
         <p class="welcome-text">
           Ուրախ ենք այս գեղեցիկ ու կարևոր օրը կիսել Ձեզ հետ։
           Ձեր ներկայությունը մեր հարսանիքը կդարձնի էլ ավելի ջերմ,
           հիշարժան և լի սիրով։
         </p>
-
         <div class="welcome-image">
-
           <div class="welcome-image-inner" style="z-index: 10000;">
-            <img 
-              src="img.jpg"
-              alt=""
-            >
+            <img src="img.jpg" alt="">
           </div>
-
-          <img
-            src="ramka2.jpg"
-            alt=""
-            class="ellipse"
-          >
-
+          <!-- <img src="ramka2.jpg" alt="" class="ellipse"> -->
         </div>
-
         <p class="welcome-date">
-          7 Սեպտեմբերի, 2026
+          15 Նոյեմբերի, 2026
         </p>
-
       </div>
-
     </section>
-
-
     <!-- =========================
          CAR SCROLL SECTION
     ========================= -->
-
     <section class="car-scroll-section">
-
       <div class="car-sticky">
-
         <!-- TEXT -->
-
         <div class="car-content">
-
           <h1>
             Օրվա ծրագիր
           </h1>
-
           <p class="subtitle">
             Ամեն ինչ, ինչ պետք է իմանաք
           </p>
-
           <div class="event">
             <span class="heart">
-              ♥
-              <img src="bride.svg"/>
+              ♥<img src="bride.svg"/>
             </span>
-            <h2>
-              Հարսի Տուն
-            </h2>
+            <h2>Հարսի Տուն</h2>
             <p>
-              <a href ="https://www.google.com/maps/place/58+Gyurjyan+Street,+Yerevan+0056/@40.1896691,44.5578462,293m/data=!3m1!1e3!4m6!3m5!1s0x406abcca953f073b:0xc8c9e307497ff765!8m2!3d40.189825!4d44.5589095!16s%2Fg%2F11crrw8myl!5m2!1e2!1e4?entry=ttu&g_ep=EgoyMDI2MDgwOS4wIKXMDSoASAFQAw%3D%3D" class="content-address">ք․ Երևան, Գյուրջյան 58</a>
+              <a href ="https://www.google.com/maps/place/58+Gyurjyan+Street,+Yerevan+0056/@40.1896691,44.5578462,293m/data=!3m1!1e3!4m6!3m5!1s0x406abcca953f073b:0xc8c9e307497ff765!8m2!3d40.189825!4d44.5589095!16s%2Fg%2F11crrw8myl!5m2!1e2!1e4?entry=ttu&g_ep=EgoyMDI2MDgwOS4wIKXMDSoASAFQAw%3D%3D" class="content-address">
+                ք․ Երևան, Գյուրջյան 58
+              </a>
             </p>
-            <span class="time">
-              12:00
-            </span>
+            <span class="time">12:00</span>
           </div>
-
           <div class="event">
             <span class="heart">
-              ♥
-              <img src="church.svg"/>
+              ♥<img src="church.svg"/>
             </span>
-            <h2>
-              Պսակադրություն
-            </h2>
+            <h2>Պսակադրություն</h2>
             <p>
-              <a href="https://www.google.com/maps/place/%D0%A6%D0%B5%D1%80%D0%BA%D0%BE%D0%B2%D1%8C+%D0%A1%D0%B2%D1%8F%D1%82%D0%BE%D0%B9+%D0%93%D0%B0%D1%8F%D0%BD%D1%8D/@40.1585763,44.2928462,957m/data=!3m1!1e3!4m14!1m7!3m6!1s0x406a952aa68c6009:0x8a692ec2c8be215a!2z0KbQtdGA0LrQvtCy0Ywg0KHQstGP0YLQvtC5INCT0LDRj9C90Y0!8m2!3d40.1575021!4d44.2918411!16s%2Fm%2F027140_!3m5!1s0x406a952aa68c6009:0x8a692ec2c8be215a!8m2!3d40.1575021!4d44.2918411!16s%2Fm%2F027140_!5m2!1e2!1e4?entry=ttu&g_ep=EgoyMDI2MDgwOS4wIKXMDSoASAFQAw%3D%3D" class="content-address">Սուրբ Գայանե եկեղեցի</a>
+              <p>Սուրբ Գայանե եկեղեցի</p>
+              <a href="https://www.google.com/maps/place/%D0%A6%D0%B5%D1%80%D0%BA%D0%BE%D0%B2%D1%8C+%D0%A1%D0%B2%D1%8F%D1%82%D0%BE%D0%B9+%D0%93%D0%B0%D1%8F%D0%BD%D1%8D/@40.1585763,44.2928462,957m/data=!3m1!1e3!4m14!1m7!3m6!1s0x406a952aa68c6009:0x8a692ec2c8be215a!2z0KbQtdGA0LrQvtCy0Ywg0KHQstGP0YLQvtC5INCT0LDRj9C90Y0!8m2!3d40.1575021!4d44.2918411!16s%2Fm%2F027140_!3m5!1s0x406a952aa68c6009:0x8a692ec2c8be215a!8m2!3d40.1575021!4d44.2918411!16s%2Fm%2F027140_!5m2!1e2!1e4?entry=ttu&g_ep=EgoyMDI2MDgwOS4wIKXMDSoASAFQAw%3D%3D" class="content-address">
+                <p>Արմավիրի մարզ, Էջմիածին</p>
+              </a>
             </p>
-            <span class="time">
-              15:00
-            </span>
+            <span class="time">15:00</span>
           </div>
-          
-
-        <div class="event">
+          <div class="event">
             <span class="heart">
-              ♥
-              <img src="restaurant.svg"/>
+              ♥<img src="restaurant.svg"/>
             </span>
-            <h2>
-              Հանդիսություն
-            </h2>
+            <h2> Հանդիսություն</h2>
             <p>
-              <a href="https://www.google.com/maps/place/%D0%9D%D0%BE%D1%80+%D0%94%D0%B2%D0%B8%D0%BD/@40.1777481,44.2902647,371m/data=!3m1!1e3!4m10!1m2!2m1!1z1bbVuNaAINWk1b7Vq9W2!3m6!1s0x406a94eab4d0fb39:0x686139cd2968c37c!8m2!3d40.1782526!4d44.2915602!15sCg_VttW41oAg1aTVvtWr1bZaESIP1bbVuNaAINWk1b7Vq9W2kgEKcmVzdGF1cmFudOABAA!16s%2Fg%2F11f37g7dj6!5m1!1e2?entry=ttu&g_ep=EgoyMDI2MDgwOS4wIKXMDSoASAFQAw%3D%3D" class="content-address">Նոր Դվին</a>
+              <p>Նոր Դվին</p>
+              <a href="https://www.google.com/maps/place/%D0%9D%D0%BE%D1%80+%D0%94%D0%B2%D0%B8%D0%BD/@40.1777481,44.2902647,371m/data=!3m1!1e3!4m10!1m2!2m1!1z1bbVuNaAINWk1b7Vq9W2!3m6!1s0x406a94eab4d0fb39:0x686139cd2968c37c!8m2!3d40.1782526!4d44.2915602!15sCg_VttW41oAg1aTVvtWr1bZaESIP1bbVuNaAINWk1b7Vq9W2kgEKcmVzdGF1cmFudOABAA!16s%2Fg%2F11f37g7dj6!5m1!1e2?entry=ttu&g_ep=EgoyMDI2MDgwOS4wIKXMDSoASAFQAw%3D%3D" class="content-address">
+                <p>Արմավիրի մարզ, <br/> Էջմիածին Աշտարակի խճուղի, 1 շենք</p>
+              </a>
             </p>
-            <span class="time">
-              17:30
-            </span>
+            <span class="time">18:00</span>
           </div>
         </div>
-
-
         <!-- CAR -->
-
-        <img
-          class="car"
-          src="./car.png"
-          alt="White car"
-        >
-
+        <img class="car" src="./car.png" alt="White car">
       </div>
-
     </section>
-
-
     <!-- =========================
          LAST SECTION
     ========================= -->
-
     <section class="welcome-section">
-
       <div class="welcome-inner">
-
-        <h2 class="welcome-title">
-          Հարգելի Աննա
-        </h2>
-
+        <h2 class="welcome-title">Հարգելի Աննա</h2>
         <p class="welcome-text">
           Ուրախ ենք այս գեղեցիկ ու կարևոր օրը կիսել Ձեզ հետ։
           Ձեր ներկայությունը մեր հարսանիքը կդարձնի էլ ավելի ջերմ,
           հիշարժան և լի սիրով։
         </p>
-
         <div class="welcome-image">
-
           <div class="welcome-image-inner">
-            <img
-              src="/__l5e/assets-v1/ec1d6b6f-06d4-4f05-826a-17130fc0e874/garden-couple.jpg"
-              alt=""
-            >
+            <img src="/__l5e/assets-v1/ec1d6b6f-06d4-4f05-826a-17130fc0e874/garden-couple.jpg" alt="">
           </div>
-
-          <img
-            src="img4.jpg"
-            alt=""
-            class="ellipse"
-          >
-
+          <img src="img4.jpg" alt="" class="ellipse">
         </div>
-
-        <p class="welcome-date">
-          7 Սեպտեմբերի, 2026
-        </p>
-
+        <p class="welcome-date">15 Նոյեմբերի, 2026</p>
       </div>
-
     </section>
-
   </div>
-
-
   <!-- =========================
        JAVASCRIPT
   ========================= -->
-<script>
-  const section = document.querySelector(".car-scroll-section");
-  const car = document.querySelector(".car");
-
-  let ticking = false;
-
-  // Ներկայիս մեքենայի դիրքը
-  let currentY = -1000;
-
-  // Scroll-ից ստացված նպատակային դիրքը
-  let targetY = -1000;
-
-
-  /*
-   * =========================
-   * CALCULATE TARGET POSITION
-   * =========================
-   */
-
-  function updateTarget() {
-
-    const rect = section.getBoundingClientRect();
-
-
+  <script>
+    const section = document.querySelector(".car-scroll-section")
+    const car = document.querySelector(".car")
+    let ticking = false
+    // Ներկայիս մեքենայի դիրքը
+    let currentY = -1000
+    // Scroll-ից ստացված նպատակային դիրքը
+    let targetY = -1000
     /*
-     * PROGRESS
+     * =========================
+     * CALCULATE TARGET POSITION
+     * =========================
      */
+    function updateTarget() {
+      const rect = section.getBoundingClientRect()
+      /*
+       * PROGRESS
+       */
 
-    let progress =
-      (window.innerHeight - rect.top - 400) /
-      (window.innerHeight + rect.height - 400);
+      let progress =
+        (window.innerHeight - rect.top - 400) /
+        (window.innerHeight + rect.height - 400)
 
-
-    progress = Math.max(
-      0,
-      Math.min(1, progress)
-    );
-
-
-    /*
-     * CAR MOVEMENT
-     */
-
-    const startY = -1000;
-    const endY = 1000;
-
-
-    targetY =
-      startY +
-      (endY - startY) * progress;
-
-
-    ticking = false;
-  }
-
-
-  /*
-   * =========================
-   * SMOOTH ANIMATION
-   * =========================
-   */
-
-  function animateCar() {
-
-    /*
-     * Դանդաղ մոտեցնում ենք
-     * currentY-ը targetY-ին
-     */
-
-    currentY += (targetY - currentY) * 0.12;
-
-
-    /*
-     * Եթե շատ փոքր տարբերություն է,
-     * անմիջապես հավասարեցնում ենք
-     */
-
-    if (Math.abs(targetY - currentY) < 0.1) {
-      currentY = targetY;
+      progress = Math.max(0,Math.min(1, progress))
+      /*
+       * CAR MOVEMENT
+       */
+      const startY = -1000
+      const endY = 1000
+      targetY = startY + (endY - startY) * progress
+      ticking = false
     }
-
-
     /*
-     * APPLY
+     * =========================
+     * SMOOTH ANIMATION
+     * =========================
      */
+    function animateCar() {
+      /*
+       * Դանդաղ մոտեցնում ենք
+       * currentY-ը targetY-ին
+       */
+      currentY += (targetY - currentY) * 0.12
+      /*
+       * Եթե շատ փոքր տարբերություն է,
+       * անմիջապես հավասարեցնում ենք
+       */
 
-    car.style.transform = `
-      translate3d(
-        -50%,
-        calc(-50% + ${currentY}px),
-        0
-      )
-    `;
+      if (Math.abs(targetY - currentY) < 0.1) {
+        currentY = targetY;
+      }
+      /*
+       * APPLY
+       */
+      car.style.transform = `translate3d( -50%, calc( -50% + ${currentY}px ), 0 )`
+      /*
+       * Շարունակում ենք animation-ը
+       */
 
-
-    /*
-     * Շարունակում ենք animation-ը
-     */
-
-    requestAnimationFrame(animateCar);
-  }
-
-
-  /*
-   * =========================
-   * SCROLL
-   * =========================
-   */
-
-  function handleScroll() {
-
-    if (!ticking) {
-
-      requestAnimationFrame(updateTarget);
-
-      ticking = true;
+      requestAnimationFrame(animateCar)
     }
-  }
+    /*
+     * =========================
+     * SCROLL
+     * =========================
+     */
 
-
-  window.addEventListener(
-    "scroll",
-    handleScroll,
-    { passive: true }
-  );
-
-
-  /*
-   * INITIAL
-   */
-
-  updateTarget();
-
-  animateCar();
-
-</script>
+    function handleScroll() {
+      if (!ticking) {
+        requestAnimationFrame(updateTarget)
+        ticking = true
+      }
+    }
+    window.addEventListener( "scroll", handleScroll, { passive: true })
+    /*
+     * INITIAL
+     */
+    updateTarget()
+    animateCar()
+  </script>
 </body>
 </html>
