@@ -1,0 +1,234 @@
+@font-face {
+    font-family: "ArmenianDecorativeU";
+    src: url("font/ArmenianDecorativeU-RegularItalic.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+    /* font-family: "ArmenianDecorativeU", sans-serif; */
+}
+
+@font-face {
+    font-family: "SloopScriptMediumOne";
+    src: url("font/SloopScriptMediumOne-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.section1 {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    min-height: 650px;
+    color: white;
+    background-image: url("invito_wedding.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.section1::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(180deg, rgb(0 0 0 / 80%) 0%, rgb(0 0 0 / 20%) 35%, rgb(0 0 0 / 20%) 65%, rgba(0, 0, 0, 0.8) 100%);
+}
+
+.section1_content {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    z-index: 10;
+}
+
+.couple_names {
+    margin-top: 3.75rem;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-family: "ArmenianDecorativeU", sans-serif;
+    /* font-size: 48px; */
+    font-weight: 500;
+    opacity: 0;
+    animation: textAppear 1.2s ease-out 0.2s forwards;
+    font-size: 3rem;
+    text-align: center;
+    line-height: 1.25;
+}
+
+
+/* =========================
+   HEART
+========================= */
+
+.heart-line {
+    margin-top: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    opacity: 0;
+    animation: textAppear 1s ease-out 0.6s forwards;
+}
+
+.heart-line span {
+    width: 55px;
+    height: 1px;
+    background: rgb(166 161 161);
+}
+
+.heart-line i {
+    font-size: 21px;
+    font-style: normal;
+    color: #ddd;
+}
+
+
+/* =========================
+   SAVE THE DATE
+========================= */
+
+
+
+/* =========================
+   DATE
+========================= */
+
+.section1__footer {
+    position: absolute;
+    bottom: 3.75rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.section1__footer p {
+    margin: 0;
+}
+
+.save-date {
+    font-size: 4rem;
+    text-align: center;
+    line-height: 4.375rem;
+    /* transform: translateY(-50%) scale(0.25); */
+    font-family: "SloopScriptMediumOne", sans-serif;
+    font-style: italic;
+    white-space: nowrap;
+    opacity: 0;
+    animation: saveDateAnimation 1.4s cubic-bezier(.17,.67,.25,1.25) 0.8s forwards;
+}
+
+.section1__date {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.875rem;
+    opacity: 0;
+    animation: dateAnimation 1.4s cubic-bezier(.17,.67,.25,1.25) 1s forwards;
+}
+
+.section1__month, .section1__year {
+    width: 8.75rem;
+    padding: 0.3125rem 0;
+    border-top: 1px solid #f9ecec66;
+    border-bottom: 1px solid #f9ecec66;
+}
+
+.section1__month p , .section1__year p {
+    font-size: 2.25rem;
+    text-align: center;
+    line-height: 3rem;
+}
+
+.section1__day {
+    font-size: 5rem;
+    line-height: 5rem;
+}
+
+
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes textAppear {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    60% {
+        opacity: 1;
+        transform: scale(1.08);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+@keyframes saveDateAnimation {
+    0% {
+        opacity: 0;
+        transform: scale(0.2);
+    }
+    60% {
+        opacity: 1;
+        transform: scale(1.12);
+    }
+    80% {
+        transform: scale(0.96);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+@keyframes dateAnimation {
+    0% {
+        opacity: 0;
+        transform: scale(0.2);
+    }
+    60% {
+        opacity: 1;
+        transform: scale(1.12);
+    }
+    80% {
+        transform: scale(0.96);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+    .section1 {
+        background-image: url("invito_wedding1.jpg");
+    }
+}
