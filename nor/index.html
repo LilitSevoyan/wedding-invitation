@@ -84,14 +84,12 @@
         document.documentElement.style.setProperty(
             "--vh",
             `${window.innerHeight * 0.01}px`
-        );
+        )
     }
-
-    setAppHeight();
-
+    setAppHeight()
     window.addEventListener("orientationchange", () => {
-        setTimeout(setAppHeight, 300);
-    });
+        setTimeout(setAppHeight, 300)
+    })
 </script>
     
 </body>

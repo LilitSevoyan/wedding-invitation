@@ -50,27 +50,12 @@ body{
     box-sizing: border-box;
 }
 
-/* .section1 {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    height: calc(var(--vh, 1vh) * 100);
-    color: white;
-    background-image: url("invito_wedding.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    overflow: hidden;
-} */
-
 .section1 {
     position: relative;
     width: 100%;
     height: calc(var(--vh, 1vh) * 100);
-
     color: white;
     overflow: hidden;
-
     background: url("invito_wedding.jpg") center center / cover no-repeat;
 }
 
@@ -98,7 +83,6 @@ body{
     align-items: center;
     gap: 14px;
     font-family: "ArmenianDecorativeU", sans-serif;
-    /* font-size: 48px; */
     font-weight: 500;
     opacity: 0;
     animation: textAppear 1.2s ease-out 0.2s forwards;
@@ -291,18 +275,11 @@ body{
     max-width: 700px;
     min-height: 100vh;
     min-height: 100dvh;
-
     display: flex;
     flex-direction: column;
     align-items: center;
-
     padding-top: 0.5rem;
 }
-
-
-/* =========================
-   TITLE
-========================= */
 
 .section2__title {
     margin: 0;
@@ -314,11 +291,6 @@ body{
     color: #333;
 }
 
-
-/* =========================
-   TEXT
-========================= */
-
 .section2__text {
     width: 330px;
     margin: 1.7rem 0 0;
@@ -329,11 +301,6 @@ body{
     text-align: center;
     color: #444;
 }
-
-
-/* =========================
-   CALENDAR
-========================= */
 
 .section2__calendar {
     margin-top: 3.1rem;
@@ -350,9 +317,6 @@ body{
     margin-top: 1.5rem;
     margin-bottom: 1rem;
 }
-
-
-/* DAYS */
 
 .section2__days {
     display: flex;
@@ -386,8 +350,6 @@ body{
     font-family: "YesevaOne", sans-serif;
 }
 
-
-/* ACTIVE DAY */
 .section2__days .active {
     width: 44px;
     height: 51px;
@@ -415,19 +377,12 @@ body{
     font-weight: normal;
 }
 
-/* =========================
-   IMAGE
-========================= */
-
 .section2__image-wrapper {
     position: relative;
     width: 300px;
     height: 395px;
     margin-top: 4.8rem;
 }
-
-
-/* BACK IMAGE / SHADOW */
 
 .section2__image-back {
     position: absolute;
@@ -440,38 +395,19 @@ body{
     transform: rotate(-15deg);
 }
 
-
-/* MAIN IMAGE */
-
 .section2__image {
     position: absolute;
-
     width: 300px;
     height: 370px;
-
     top: 10px;
     left: 0;
-
     object-fit: cover;
-
     border-radius: 14px;
-
     display: block;
 }
 
-
-/* =========================
-   MOBILE
-========================= */
-
-@media (max-width: 768px) {
-
-    .section2 {
-        min-height: 100dvh;
-    }
-
+/* @media (max-width: 768px) {
     .section2__content {
-        min-height: 100dvh;
         padding-top: 0.4rem;
     }
 
@@ -526,14 +462,14 @@ body{
         width: 270px;
         height: 330px;
     }
-}
+} */
 
 
 /* =========================
    SMALL MOBILE
 ========================= */
 
-@media (max-width: 500px) {
+/* @media (max-width: 500px) {
 
     .section2__title {
         font-size: 1.45rem;
@@ -555,4 +491,4 @@ body{
     .section2__image-wrapper {
         margin-top: 3.8rem;
     }
-}
+} */
