@@ -376,7 +376,7 @@ body{
 .section2__image-wrapper {
     position: relative;
     width: 300px;
-    height: 395px;
+    height: 410px;
     margin-top: 4.8rem;
 }
 
@@ -448,3 +448,169 @@ body{
         font-size: 1.4rem;
     }
 }
+/* =========================
+   SECTION 3
+========================= */
+
+ /* =========================
+       CAR SCROLL SECTION
+    ========================= */
+
+    .car-scroll-section {
+      /* position: relative; */
+      height: 100vh;
+    }
+    /* =========================
+       STICKY
+    ========================= */
+
+    .car-sticky {
+      position: sticky;
+      top: 0;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+      background: #b5a392;
+    }
+
+    /* =========================
+       TEXT
+    ========================= */
+
+    .car-content {
+      /* position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+      text-align: center; */
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+
+    }
+
+    .car-content h1 {
+      font-size: 56px;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    .subtitle {
+      font-size: 20px;
+      color: #777;
+      margin-bottom: 50px;
+    }
+
+    /* =========================
+       EVENT
+    ========================= */
+
+    .event {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .heart {
+      /* position: absolute;
+      left: 0;
+      top: 0; */
+      font-size: 25px;
+      color: #c59a52;
+    }
+
+    .time {
+      display: block;
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .event h2 {
+      font-size: 30px;
+      margin-bottom: 12px;
+    }
+
+    .event p {
+      font-size: 17px;
+      line-height: 1.7;
+      color: #666;
+    }
+
+    /* =========================
+       CAR
+    ========================= */
+
+    .car {
+      position: absolute;
+      width: 700px;
+      left: 50%;
+      top: 50%;
+      z-index: 10;
+      will-change: transform;
+      transform: translate3d(-50%, -50%, 0);
+      pointer-events: none;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+    }
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 768px) {
+
+      .welcome-section {
+        padding-top: 60px;
+      }
+
+      .welcome-title {
+        font-size: 30px;
+      }
+
+      .welcome-text {
+        font-size: 16px;
+      }
+
+      .welcome-image {
+        width: 80%;
+      }
+
+      .welcome-date {
+        font-size: 21px;
+        margin-top: 70px;
+      }
+
+      .car-content {
+        /* left: 25px;
+        right: 25px;
+        top: 35%;
+        width: auto; */
+      }
+
+      .car-content h1 {
+        font-size: 38px;
+      }
+
+      .subtitle {
+        font-size: 16px;
+      }
+
+      .event h2 {
+        font-size: 23px;
+      }
+
+      .event p {
+        font-size: 15px;
+      }
+
+      .car {
+        width: 435px;
+        max-width: 85vw;
+        left: 50%;
+        top: 50%;
+      }
+    }
