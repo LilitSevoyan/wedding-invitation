@@ -406,70 +406,7 @@ body{
     display: block;
 }
 
-/* @media (max-width: 768px) {
-    .section2__content {
-        padding-top: 0.4rem;
-    }
-
-    .section2__title {
-        font-size: 1.55rem;
-    }
-
-    .section2__text {
-        width: 310px;
-        margin-top: 1.5rem;
-
-        font-size: 0.85rem;
-        line-height: 1.5;
-    }
-
-    .section2__calendar {
-        margin-top: 2.8rem;
-    }
-
-    .section2__calendar-title {
-        font-size: 1.45rem;
-        margin-bottom: 0.9rem;
-    }
-
-    .section2__days {
-        gap: 0.45rem;
-    }
-
-    .section2__days > span {
-        width: 34px;
-        height: 34px;
-    }
-
-    .section2__days .active {
-        width: 44px;
-        height: 51px;
-    }
-
-    .section2__image-wrapper {
-        width: 270px;
-        height: 350px;
-
-        margin-top: 4.2rem;
-    }
-
-    .section2__image-back {
-        width: 245px;
-        height: 330px;
-    }
-
-    .section2__image {
-        width: 270px;
-        height: 330px;
-    }
-} */
-
-
-/* =========================
-   SMALL MOBILE
-========================= */
-
-/* @media (max-width: 500px) {
+@media (max-width: 500px) {
 
     .section2__title {
         font-size: 1.45rem;
@@ -477,7 +414,7 @@ body{
 
     .section2__text {
         width: 290px;
-        font-size: 0.8rem;
+        font-size: 0.9rem;
     }
 
     .section2__calendar {
@@ -485,10 +422,33 @@ body{
     }
 
     .section2__calendar-title {
-        font-size: 1.35rem;
+        font-size: 1.5rem;
     }
 
     .section2__image-wrapper {
         margin-top: 3.8rem;
+        width: 250px;
     }
-} */
+
+    .section2__image-back {
+        width: 220px;
+        height: 320px;
+    }
+
+    .section2__image {
+        width: 250px;
+        height: 320px;
+    }
+
+    .w-35 {
+        font-size: 0.9rem;
+    }
+
+    .w-40 {
+        font-size: 1.1rem;
+    }
+
+    .section2__days .active b {
+        font-size: 1.4rem;
+    }
+}
