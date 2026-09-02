@@ -15,6 +15,30 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: "Montserratarm";
+    src: url("font/Montserratarm-Regular.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "AbrilFatface";
+    src: url("font/AbrilFatface-Regular.ttf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "YesevaOne";
+    src: url("font/YesevaOne-Regular.ttf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -98,17 +122,6 @@ body{
     color: #ddd;
 }
 
-
-/* =========================
-   SAVE THE DATE
-========================= */
-
-
-
-/* =========================
-   DATE
-========================= */
-
 .section1__footer {
     position: absolute;
     bottom: 3.75rem;
@@ -141,6 +154,7 @@ body{
     align-items: center;
     justify-content: center;
     gap: 0.875rem;
+    font-family: "YesevaOne", sans-serif;
     opacity: 0;
     animation: dateAnimation 1.4s cubic-bezier(.17,.67,.25,1.25) 1s forwards;
 }
@@ -150,12 +164,15 @@ body{
     padding: 0.3125rem 0;
     border-top: 1px solid #f9ecec66;
     border-bottom: 1px solid #f9ecec66;
+    font-family: "AbrilFatface", sans-serif;
 }
 
 .section1__month p , .section1__year p {
     font-size: 2.25rem;
     text-align: center;
     line-height: 3rem;
+    font-family: "AbrilFatface", sans-serif;
+    /* font-family: "Montserratarm", sans-serif; */
 }
 
 .section1__day {
@@ -231,4 +248,31 @@ body{
     .section1 {
         background-image: url("invito_wedding1.jpg");
     }
+}
+
+
+@media (max-width: 500PX) {
+    .couple_names {
+        font-size: 2.25rem;
+    }
+
+    .save-date {
+        font-size: 3rem;
+        line-height: 3.75rem;
+    }
+
+    .section1__month, .section1__year {
+        width: 6.5rem;
+    }
+
+    .section1__month p, .section1__year p {
+        font-size: 1.5rem;
+        line-height: 1.5;
+    }
+
+    .section1__day {
+        font-size: 4rem;
+        line-height: 4rem;
+    }
+
 }
