@@ -60,7 +60,7 @@ body{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .section1::after {
@@ -237,10 +237,6 @@ body{
     .couple_names {
         font-size: 2.25rem;
     }
-
-    /* .heart-line {
-        margin-top: 0rem;
-    } */
 
     .save-date {
         font-size: 3rem;
@@ -496,7 +492,6 @@ body{
     .section2__days > span {
         width: 34px;
         height: 34px;
-        font-size: 0.9rem;
     }
 
     .section2__days .active {
