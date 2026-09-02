@@ -614,3 +614,11 @@ body{
         top: 50%;
       }
     }
+
+
+    @media (max-width: 500px) {
+        .car {
+            width: 470px;
+            max-width: 470px;
+        }
+    }
