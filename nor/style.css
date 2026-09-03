@@ -39,6 +39,14 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: "NotoSansArmenian_ExtraCondensed";
+    src: url("font/NotoSansArmenian_ExtraCondensed-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -465,12 +473,14 @@ body{
     ========================= */
 
     .car-sticky {
-      position: sticky;
-      top: 0;
-      width: 100%;
-      height: 100vh;
-      overflow: hidden;
-      background: #b5a392;
+        position: sticky;
+        top: 0;
+        width: 100%;
+        /* hetberel */
+        /* height: 100vh; */
+        overflow: hidden;
+        background: #b5a392;
+        color: white;
     }
 
     /* =========================
@@ -496,15 +506,13 @@ body{
         font-size: 56px;
         font-weight: 700;
         margin-bottom: 15px;
-        color: white;
-        font-family: "ArmenianDecorativeU", sans-serif;
+        font-family: "NotoSansArmenian_ExtraCondensed", sans-serif;
     }
 
     .subtitle {
         font-size: 20px;
-        color: white;
         margin-bottom: 50px;
-        font-family: "YesevaOne", sans-serif;
+        font-family: "ArmenianDecorativeU", sans-serif;
     }
 
     /* =========================
