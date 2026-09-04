@@ -601,64 +601,51 @@ body{
        MOBILE
     ========================= */
 
-    @media (max-width: 768px) {
-
-      .welcome-section {
+@media (max-width: 768px) {
+    .welcome-section {
         padding-top: 60px;
-      }
-
-      .welcome-title {
+    }
+    .welcome-title {
         font-size: 30px;
-      }
-
-      .welcome-text {
+    }
+    .welcome-text {
         font-size: 16px;
-      }
-
-      .welcome-image {
+    }
+    .welcome-image {
         width: 80%;
-      }
-
-      .welcome-date {
+    }
+    .welcome-date {
         font-size: 21px;
         margin-top: 70px;
-      }
-
-      .car-content {
-        /* left: 25px;
-        right: 25px;
-        top: 35%;
-        width: auto; */
-      }
-
-      .car-content h1 {
+    }
+    .car-content h1 {
         font-size: 38px;
-      }
-
-      .subtitle {
+    }
+    .subtitle {
         font-size: 16px;
-      }
-
-      .event h2 {
+    }
+    .event h2 {
         font-size: 23px;
-      }
-
-      .event p {
+    }
+    .event p {
         font-size: 15px;
-      }
-
-      .car {
+    }
+    .church_image, .location_image {
+        width: 235px;
+    }
+    .car {
         width: 435px;
         max-width: 85vw;
         left: 50%;
         top: 50%;
-      }
     }
+}
 
 
-    @media (max-width: 500px) {
-        .car {
-            width: 470px;
-            max-width: 470px;
-        }
+@media (max-width: 500px) {
+    .car {
+        width: 470px;
+        max-width: 470px;
+        top: 38%;
     }
+}
