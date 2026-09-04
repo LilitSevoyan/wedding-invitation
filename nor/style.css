@@ -370,7 +370,7 @@ body{
     height: 65px;
     top: -6px;
     left: -6px;
-    fill: #b5a392;
+    fill: #C0B0A0;
 }
 
 .section2__days .active b {
@@ -479,7 +479,7 @@ body{
         /* hetberel */
         /* height: 100vh; */
         overflow: hidden;
-        background: #b5a392;
+        background: #C0B0A0;
         color: #f2f2f2;
     }
 
@@ -503,15 +503,16 @@ body{
     }
 
     .car-content h1 {
-        font-size: 56px;
-        font-weight: 700;
-        margin-bottom: 15px;
+        font-size: 48px;
+        line-height: 1.2;
+        margin-bottom: 10px;
+        color: #F8F5F0;
         font-family: "NotoSansArmenian_ExtraCondensed", sans-serif;
     }
 
     .subtitle {
         font-size: 20px;
-        margin-bottom: 50px;
+        margin-bottom: 30px;
         font-family: "ArmenianDecorativeU", sans-serif;
     }
 
@@ -529,18 +530,26 @@ body{
     }
 
     .heart {
-        /* position: absolute;
-        left: 0;
-        top: 0; */
         font-size: 25px;
-        color: #9f6f1f;
+        color: #B88A3B;
+    }
+
+    .event_image {
+        width: 100px;
+        height: auto;
+        margin: 12px auto 8px;
+        display: block;
+    }
+
+    .church_image, .location_image {
+        width: 350px;
     }
 
     .time {
       display: block;
-      font-size: 18px;
       font-weight: bold;
-      margin-bottom: 10px;
+      font-size: 1.5rem; 
+      margin: 5px 0;
     }
 
     .event h2 {
@@ -559,6 +568,16 @@ body{
 
     .event a {
         color: #f2f2f2;
+    }
+
+    .btn_map {
+        width: 200px; 
+        height: 50px; 
+        background-color: black; 
+        color: white; 
+        border-radius: 30px; 
+        font-size: 1rem; 
+        margin:10px 0;
     }
 
     /* =========================
