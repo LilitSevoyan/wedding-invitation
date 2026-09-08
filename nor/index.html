@@ -323,42 +323,32 @@ function updateTarget() {
 
     const rect = section.getBoundingClientRect();
 
-    /*
-     * Section-ի իրական scroll progress
-     *
-     * section-ի սկիզբը
-     *      ↓
-     * 0%
-     *
-     * section-ի վերջը
-     *      ↓
-     * 100%
-     */
-
     const sectionHeight = section.offsetHeight;
     const viewportHeight = window.innerHeight;
 
+    /*
+     * Մեքենան սկսում է շարժվել,
+     * երբ section-ի վերևը հասնում է viewport-ի կեսին
+     */
+
+    const startPoint = viewportHeight * 0.5;
+
     let progress =
-        -rect.top / (sectionHeight - viewportHeight);
+        (startPoint - rect.top) /
+        (sectionHeight - startPoint);
 
     progress = Math.max(0, Math.min(1, progress));
 
 
     /*
-     * =========================
      * CAR MOVEMENT
-     * =========================
-     *
-     * Սկզբում մեքենան վերևում է
-     * scroll-ի ժամանակ իջնում է ներքև
      */
 
-    const startY = -1000;
+    const startY = -950;
     const endY = 1400;
 
     targetY =
         startY + (endY - startY) * progress;
-
 
     ticking = false;
 }
