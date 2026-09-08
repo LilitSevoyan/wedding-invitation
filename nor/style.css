@@ -276,7 +276,7 @@ body{
     justify-content: center;
 }
 
-.section2__content {
+.section2__content, .section4__content {
     width: 100%;
     max-width: 700px;
     display: flex;
@@ -285,7 +285,7 @@ body{
     padding-top: 0.5rem;
 }
 
-.section2__title {
+.section2__title, .section4__title {
     margin: 0;
     font-family: "YesevaOne", sans-serif;
     font-size: 2rem;
@@ -295,7 +295,7 @@ body{
     color: #333;
 }
 
-.section2__text {
+.section2__text, .section4__text {
     width: 330px;
     margin: 1.7rem 0 0;
     font-family: "YesevaOne", sans-serif;
@@ -466,7 +466,7 @@ body{
 
     .car-scroll-section {
         /* position: relative; */
-        height: 100vh;
+        /* height: 100vh; */
     }
     /* =========================
        STICKY
@@ -649,3 +649,422 @@ body{
         top: 38%;
     }
 }
+
+/* section 4 */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Yeseva+One&display=swap');
+
+
+* {
+    box-sizing: border-box;
+}
+
+.section4 {
+    position: relative;
+    width: 100%;
+    margin: 60px 0;
+    background:
+      radial-gradient(
+          ellipse at 50% 20%,
+          rgba(255, 255, 255, 0.95) 0%,
+          rgba(247, 245, 238, 0.92) 45%,
+          rgba(239, 237, 228, 0.88) 100%
+      );
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+
+/* թեթև ֆոնային texture */
+.section4::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(
+            ellipse at 20% 30%,
+            rgba(255,255,255,.7),
+            transparent 35%
+        ),
+        radial-gradient(
+            ellipse at 80% 65%,
+            rgba(255,255,255,.65),
+            transparent 40%
+        );
+    pointer-events: none;
+}
+
+
+/* =========================
+   COUNTDOWN
+========================= */
+
+.countdown-section {
+    margin-bottom: 58px;
+}
+
+.countdown-title {
+    margin-bottom: 40px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.8rem;
+    font-weight: 500;
+    letter-spacing: 0.4px;
+    color: #292016;
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.count-item {
+    min-width: 62px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.count-item span {
+    display: block;
+    font-family: "Montserrat", sans-serif;
+    font-size: 3.8rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #291d12;
+}
+
+.count-item small {
+    margin-top: 8px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #766d62;
+}
+
+.separator { 
+    font-size: 3.8rem;
+    line-height: 1; 
+    margin-top: -20px; 
+}
+
+/* =========================
+   INVITATION
+========================= */
+
+.invitation-section {
+    margin-bottom: 35px;
+}
+
+.invitation-section h2,
+.rsvp-section h2 {
+    margin: 0 0 17px;
+    font-family: "Yeseva One", serif;
+    font-size: 2.8rem;
+    font-weight: 400;
+    color: #302117;
+}
+
+
+.invitation-section p {
+    margin: 0 auto 19px;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+
+    line-height: 1.65;
+
+    color: #443a30;
+}
+
+
+.ornament {
+    margin: 36px auto 0;
+
+    font-family: serif;
+    font-size: 27px;
+
+    color: #b8914b;
+
+    transform: scaleX(1.4);
+}
+
+
+/* =========================
+   RSVP
+========================= */
+
+.rsvp-section {
+    width: 100%;
+
+    text-align: left;
+}
+
+
+.rsvp-section h2 {
+    text-align: center;
+
+    margin-bottom: 13px;
+}
+
+
+.rsvp-subtitle {
+    margin: 0 0 28px;
+
+    text-align: center;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+
+    line-height: 1.55;
+
+    color: #443a30;
+}
+
+
+.rsvp-subtitle strong {
+    font-weight: 700;
+}
+
+
+.form-group {
+    margin-bottom: 21px;
+}
+
+
+.form-group > label:first-child {
+    display: block;
+
+    margin-bottom: 10px;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+
+    line-height: 1.45;
+
+    color: #4a4036;
+}
+
+
+.form-group input[type="text"] {
+    width: 100%;
+    height: 31px;
+
+    padding: 3px 2px;
+
+    border: none;
+    border-bottom: 1px solid #574d43;
+
+    background: transparent;
+
+    outline: none;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+
+    color: #33281f;
+}
+
+
+.form-group input[type="text"]:focus {
+    border-bottom-color: #b8914b;
+}
+
+
+/* divider */
+
+.form-divider {
+    width: 100%;
+    height: 1px;
+
+    margin: 22px 0 19px;
+
+    background: #5b5045;
+}
+
+
+/* checkbox / radio */
+
+.checkbox-label,
+.radio-label {
+    display: flex;
+    align-items: center;
+
+    gap: 6px;
+
+    margin-bottom: 5px;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 10px;
+
+    color: #5c5147;
+
+    cursor: pointer;
+}
+
+
+.checkbox-label input,
+.radio-label input {
+    appearance: none;
+
+    width: 11px;
+    height: 11px;
+
+    margin: 0;
+
+    border: 1px solid #70665c;
+
+    background: transparent;
+
+    cursor: pointer;
+}
+
+
+.radio-label input {
+    border-radius: 50%;
+}
+
+
+.checkbox-label input:checked,
+.radio-label input:checked {
+    position: relative;
+
+    border-color: #b8914b;
+}
+
+
+.checkbox-label input:checked::after {
+    content: "";
+
+    position: absolute;
+
+    width: 5px;
+    height: 5px;
+
+    left: 2px;
+    top: 2px;
+
+    background: #b8914b;
+}
+
+
+.radio-label input:checked::after {
+    content: "";
+
+    position: absolute;
+
+    width: 5px;
+    height: 5px;
+
+    left: 2px;
+    top: 2px;
+
+    border-radius: 50%;
+
+    background: #b8914b;
+}
+
+
+/* =========================
+   SUBMIT
+========================= */
+
+.submit-btn {
+    display: block;
+
+    width: 125px;
+    height: 31px;
+
+    margin: 0 auto;
+
+    border: none;
+    border-radius: 20px;
+
+    background: #bd934b;
+
+    color: #382c20;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition: all .25s ease;
+}
+
+
+.submit-btn:hover {
+    background: #a98140;
+    transform: translateY(-1px);
+}
+
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+
+/* =========================
+   BOTTOM ORNAMENT
+========================= */
+
+.bottom-ornament {
+    margin-top: 52px;
+
+    text-align: center;
+
+    font-family: serif;
+    font-size: 27px;
+
+    color: #b8914b;
+
+    transform: scaleX(1.4);
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+/* @media (max-width: 390px) {
+
+    .section4 {
+        padding: 35px 20px 55px;
+    }
+
+    .count-item {
+        min-width: 57px;
+    }
+
+    .count-item span {
+        font-size: 26px;
+    }
+
+    .countdown {
+        gap: 5px;
+    }
+
+    .countdown-title {
+        font-size: 15px;
+    }
+
+    .invitation-section h2,
+    .rsvp-section h2 {
+        font-size: 23px;
+    }
+}
+
+
+@media (min-width: 768px) {
+
+    .section4 {
+        padding-top: 55px;
+    }
+} */

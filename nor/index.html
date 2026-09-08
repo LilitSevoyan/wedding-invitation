@@ -84,10 +84,7 @@
             </div>
         </div>
     </section>
-    <section class="section3">
-
-    </section>
-    <section class="car-scroll-section">
+    <section class="car-scroll-section section3">
       <div class="car-sticky">
         <!-- TEXT -->
         <div class="car-content">
@@ -152,7 +149,149 @@
         <!-- car3 i salony aveli siruna -->
       </div>
     </section>
-    <section style="height:100vh"></section>
+    <section class="section4" id="wedding">
+        <div class="section4__content">
+            <!-- COUNTDOWN -->
+            <div class="countdown-section">
+                <div class="countdown-title">
+                    ՀԱՐՍԱՆԻՔԻՆ ՄՆԱՑԵԼ Է ...
+                </div>
+                <div class="countdown" id="countdown">
+                    <div class="count-item">
+                        <span id="days">00</span>
+                        <small>օր</small>
+                    </div>
+                    <span class="separator">:</span>
+                    <div class="count-item">
+                        <span id="hours">00</span>
+                        <small>ժամ</small>
+                    </div>
+                    <span class="separator">:</span>
+                    <div class="count-item">
+                        <span id="minutes">00</span>
+                        <small>րոպե</small>
+                    </div>
+                    <span class="separator">:</span>
+                    <div class="count-item">
+                        <span id="seconds">00</span>
+                        <small>վայրկյան</small>
+                    </div>
+                </div>
+            </div>
+          
+          
+            <!-- INVITATION -->
+            <div class="section4__content">
+            
+                <h2 class="section4__title">Դետալներ</h2>
+            
+                <p class="section4__text">
+                    Ձեր ներկայությունը մեր<br>
+                    հարսանիքին մեզ համար կլինի<br>
+                    ամենաթանկ նվերը, իսկ Ձեր<br>
+                    ժպիտը՝ օրվա ամենագեղեցիկ շողը։
+                </p>
+              
+                <p class="section4__text">
+                    Թույլ տանք, որ այդ օրը սպիտակ<br>
+                    զգեստով լինի միայն<br>
+                    հարսնացուն 💍
+                </p>
+              
+                <div class="ornament">
+                    ∿━━━━━━∿
+                </div>
+              
+            </div>
+          
+          
+            <!-- RSVP -->
+            <div class="rsvp-section">
+            
+                <h2>Հաստատեք</h2>
+            
+                <p class="rsvp-subtitle">
+                    Կսպասենք Ձեր պատասխանին<br>
+                    մինչև <strong>20-ը։</strong>
+                </p>
+              
+                <form id="weddingForm">
+                
+                    <div class="form-group">
+                        <label>
+                            Նշեք Ձեր և հրավիրված անձանց<br>
+                            անուն/ազգանունը
+                        </label>
+                      
+                        <input type="text" name="guests">
+                    </div>
+                  
+                  
+                    <div class="form-divider"></div>
+                  
+                  
+                    <div class="form-group">
+                        <label>Ո՞վ եք հրավիրված</label>
+                    
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="guest_type" value="միայնակ">
+                            <span>Միայնակ</span>
+                        </label>
+                      
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="guest_type" value="ընկերոջ հետ">
+                            <span>Ընկերոջ հետ</span>
+                        </label>
+                    </div>
+                  
+                  
+                    <div class="form-group">
+                        <label>
+                            Կկարողանա՞ք ներկա գտնվել<br>
+                            միջոցառմանը
+                        </label>
+                      
+                        <label class="radio-label">
+                            <input type="radio" name="attendance" value="Այո, հաճույքով">
+                            <span>Այո, հաճույքով</span>
+                        </label>
+                      
+                        <label class="radio-label">
+                            <input type="radio" name="attendance" value="Ցավոք ոչ">
+                            <span>Ցավոք ոչ</span>
+                        </label>
+                    </div>
+                  
+                  
+                    <div class="form-group">
+                        <label>
+                            Գրեք Ձեր նախընտրած երգը
+                        </label>
+                      
+                        <input type="text" name="song">
+                    </div>
+                  
+                  
+                    <div class="form-divider"></div>
+                  
+                  
+                    <button type="submit" class="submit-btn">
+                        Ուղարկել
+                    </button>
+                  
+                </form>
+              
+            </div>
+          
+          
+            <div class="bottom-ornament">
+                ∿━━━━━━∿
+            </div>
+          
+        </div>
+    </section>
+    
+
     <script>
         // section 1
         function setAppHeight() {
@@ -193,8 +332,8 @@
           /*
            * CAR MOVEMENT
            */
-          const startY = -1000
-          const endY = 1000
+          const startY = -1800
+          const endY = 1800
           targetY = startY + (endY - startY) * progress
           ticking = false
         }
@@ -245,6 +384,60 @@
          */
         updateTarget()
         animateCar()
+
+
+        // section 4
+    const weddingDate = new Date("November 15, 2026 00:00:00").getTime();
+
+    function updateCountdown() {
+
+        const now = new Date().getTime();
+        const distance = weddingDate - now;
+
+        if (distance <= 0) {
+            document.getElementById("days").textContent = "00";
+            document.getElementById("hours").textContent = "00";
+            document.getElementById("minutes").textContent = "00";
+            document.getElementById("seconds").textContent = "00";
+            return;
+        }
+
+        const days = Math.floor(
+            distance / (1000 * 60 * 60 * 24)
+        );
+
+        const hours = Math.floor(
+            (distance % (1000 * 60 * 60 * 24)) /
+            (1000 * 60 * 60)
+        );
+
+        const minutes = Math.floor(
+            (distance % (1000 * 60 * 60)) /
+            (1000 * 60)
+        );
+
+        const seconds = Math.floor(
+            (distance % (1000 * 60)) /
+            1000
+        );
+
+        document.getElementById("days").textContent =
+            String(days).padStart(2, "0");
+
+        document.getElementById("hours").textContent =
+            String(hours).padStart(2, "0");
+
+        document.getElementById("minutes").textContent =
+            String(minutes).padStart(2, "0");
+
+        document.getElementById("seconds").textContent =
+            String(seconds).padStart(2, "0");
+    }
+
+    updateCountdown();
+
+    setInterval(updateCountdown, 1000);
+
     </script>
     
 </body>
