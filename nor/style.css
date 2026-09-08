@@ -499,6 +499,7 @@ body{
         flex-direction: column;
         align-content: center;
         align-items: center;
+        margin: 40px auto;
 
     }
 
@@ -1068,3 +1069,4 @@ body{
         padding-top: 55px;
     }
 } */
+
