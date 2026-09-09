@@ -604,7 +604,7 @@ body{
 .separator { 
     font-size: 3.8rem;
     line-height: 1; 
-    margin-top: -20px; 
+    margin-top: -45px;
 }
 
 /* =========================
@@ -997,5 +997,14 @@ body{
 
     .form-group > label:first-child {
         font-size: 1.1rem;
+    }
+
+    .separator {
+        font-size: 2.3rem;
+        margin-top: -38px;
+    }
+
+    .countdown { 
+        gap: 0;
     }
 }
