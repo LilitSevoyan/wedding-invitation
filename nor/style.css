@@ -230,37 +230,6 @@ body{
     }
 }
 
-@media (max-width: 768px) {
-    .section1 {
-        background-image: url("invito_wedding1.jpg");
-    }
-}
-
-@media (max-width: 500px) {
-    .couple_names {
-        font-size: 2.25rem;
-    }
-
-    .save-date {
-        font-size: 3rem;
-        line-height: 3.75rem;
-    }
-
-    .section1__month, .section1__year {
-        width: 6.5rem;
-    }
-
-    .section1__month p, .section1__year p {
-        font-size: 1.5rem;
-        line-height: 1.5;
-    }
-
-    .section1__day {
-        font-size: 4rem;
-        line-height: 4rem;
-    }
-
-}
 
 /* =========================
    SECTION 2
@@ -299,7 +268,7 @@ body{
     width: 330px;
     margin: 1.7rem 0 0;
     font-family: "YesevaOne", sans-serif;
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: normal;
     line-height: 1.7;
     text-align: center;
@@ -410,245 +379,126 @@ body{
     display: block;
 }
 
-@media (max-width: 500px) {
-
-    .section2__title {
-        font-size: 1.45rem;
-    }
-
-    .section2__text {
-        width: 290px;
-        font-size: 0.9rem;
-    }
-
-    .section2__calendar {
-        margin-top: 2.5rem;
-    }
-
-    .section2__calendar-title {
-        font-size: 1.5rem;
-    }
-
-    .section2__image-wrapper {
-        margin-top: 3.8rem;
-        width: 250px;
-    }
-
-    .section2__image-back {
-        width: 220px;
-        height: 320px;
-    }
-
-    .section2__image {
-        width: 250px;
-        height: 320px;
-    }
-
-    .w-35 {
-        font-size: 0.9rem;
-    }
-
-    .w-40 {
-        font-size: 1.1rem;
-    }
-
-    .section2__days .active b {
-        font-size: 1.4rem;
-    }
-}
 /* =========================
    SECTION 3
 ========================= */
 
  /* =========================
-       CAR SCROLL SECTION
-    ========================= */
-
-    .car-scroll-section {
-        /* position: relative; */
-        /* height: 100vh; */
-    }
-    /* =========================
-       STICKY
-    ========================= */
-
-    .car-sticky {
-        position: sticky;
-        top: 0;
-        width: 100%;
-        /* hetberel */
-        /* height: 100vh; */
-        overflow: hidden;
-        background: #C0B0A0;
-        color: #f2f2f2;
-    }
-
-    /* =========================
-       TEXT
-    ========================= */
-
-    .car-content {
-        /* position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 1;
-        text-align: center; */
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-content: center;
-        align-items: center;
-        margin: 40px auto;
-
-    }
-
-    .car-content h1 {
-        font-size: 48px;
-        line-height: 1.2;
-        margin-bottom: 10px;
-        color: #F8F5F0;
-        font-family: "NotoSansArmenian_ExtraCondensed", sans-serif;
-    }
-
-    .subtitle {
-        font-size: 20px;
-        margin-bottom: 30px;
-        font-family: "ArmenianDecorativeU", sans-serif;
-    }
-
-    /* =========================
-       EVENT
-    ========================= */
-
-    .event {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        align-content: center;
-        text-align: center;
-        margin: 20px 0px;
-    }
-
-    .heart {
-        font-size: 25px;
-        color: #B88A3B;
-    }
-
-    .event_image {
-        width: 100px;
-        height: auto;
-        margin: 12px auto 8px;
-        display: block;
-    }
-
-    .church_image, .location_image {
-        width: 350px;
-    }
-
-    .time {
-      display: block;
-      font-weight: bold;
-      font-size: 1.5rem; 
-      margin: 5px 0;
-    }
-
-    .event h2 {
-      font-size: 30px;
-      margin-bottom: 12px;
-      font-family: "ArmenianDecorativeU", sans-serif;
-    }
-
-    .event p {
-        font-size: 17px;
-        line-height: 1.7;
-        color: #f2f2f2;
-        margin: 5px;
-
-    }
-
-    .event a {
-        color: #f2f2f2;
-    }
-
-    .btn_map {
-        width: 200px; 
-        height: 50px; 
-        background-color: black; 
-        color: white; 
-        border-radius: 30px; 
-        font-size: 1rem; 
-        margin:10px 0;
-    }
-
-    /* =========================
-       CAR
-    ========================= */
-
-    .car {
-      position: absolute;
-      width: 510px;
-      left: 50%;
-      top: 50%;
-      z-index: 10;
-      will-change: transform;
-      transform: translate3d(-50%, -50%, 0);
-      pointer-events: none;
-      backface-visibility: hidden;
-      -webkit-backface-visibility: hidden;
-    }
-
-    /* =========================
-       MOBILE
-    ========================= */
-
-@media (max-width: 768px) {
-    .welcome-section {
-        padding-top: 60px;
-    }
-    .welcome-title {
-        font-size: 30px;
-    }
-    .welcome-text {
-        font-size: 16px;
-    }
-    .welcome-image {
-        width: 80%;
-    }
-    .welcome-date {
-        font-size: 21px;
-        margin-top: 70px;
-    }
-    .car-content h1 {
-        font-size: 38px;
-    }
-    .subtitle {
-        font-size: 16px;
-    }
-    .event h2 {
-        font-size: 23px;
-    }
-    .event p {
-        font-size: 15px;
-    }
-    .church_image, .location_image {
-        width: 235px;
-    }
-    .car {
-        width: 435px;
-        max-width: 85vw;
-        left: 50%;
-        top: 50%;
-    }
+   CAR SCROLL SECTION
+========================= */
+.car-scroll-section {
+    /* position: relative; */
+    /* height: 100vh; */
 }
-
-
-@media (max-width: 500px) {
-    .car {
-        width: 470px;
-        max-width: 470px;
-        top: 38%;
-    }
+/* =========================
+   STICKY
+========================= */
+.car-sticky {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    /* hetberel */
+    /* height: 100vh; */
+    overflow: hidden;
+    background: #C0B0A0;
+    color: #f2f2f2;
+}
+/* =========================
+   TEXT
+========================= */
+.car-content {
+    /* position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    text-align: center; */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    margin: 40px auto;
+}
+.car-content h1 {
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 10px;
+    color: #F8F5F0;
+    font-family: "NotoSansArmenian_ExtraCondensed", sans-serif;
+}
+.subtitle {
+    font-size: 20px;
+    margin-bottom: 30px;
+    font-family: "ArmenianDecorativeU", sans-serif;
+}
+/* =========================
+   EVENT
+========================= */
+.event {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    margin: 20px 0px;
+}
+.heart {
+    font-size: 25px;
+    color: #B88A3B;
+}
+.event_image {
+    width: 100px;
+    height: auto;
+    margin: 12px auto 8px;
+    display: block;
+}
+.church_image, .location_image {
+    width: 350px;
+}
+.time {
+  display: block;
+  font-weight: bold;
+  font-size: 1.5rem; 
+  margin: 5px 0;
+}
+.event h2 {
+  font-size: 30px;
+  margin-bottom: 12px;
+  font-family: "ArmenianDecorativeU", sans-serif;
+}
+.event p {
+    font-size: 17px;
+    line-height: 1.7;
+    color: #f2f2f2;
+    margin: 5px;
+}
+.event a {
+    color: #f2f2f2;
+}
+.btn_map {
+    width: 200px; 
+    height: 50px; 
+    background-color: black; 
+    color: white; 
+    border-radius: 30px; 
+    font-size: 1rem; 
+    margin:10px 0;
+}
+/* =========================
+   CAR
+========================= */
+.car {
+  position: absolute;
+  width: 510px;
+  left: 50%;
+  top: 50%;
+  z-index: 10;
+  will-change: transform;
+  transform: translate3d(-50%, -50%, 0);
+  pointer-events: none;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 /* section 4 */
@@ -679,7 +529,7 @@ body{
 
 
 /* թեթև ֆոնային texture */
-.section4::before {
+/* .section4::before {
     content: "";
     position: absolute;
     inset: 0;
@@ -695,7 +545,7 @@ body{
             transparent 40%
         );
     pointer-events: none;
-}
+} */
 
 
 /* =========================
@@ -760,6 +610,10 @@ body{
     margin-bottom: 35px;
 }
 
+.rsvp-section {
+    max-width: 500px;
+}
+
 .invitation-section h2,
 .rsvp-section h2 {
     margin: 0 0 17px;
@@ -772,25 +626,19 @@ body{
 
 .invitation-section p {
     margin: 0 auto 19px;
-
     font-family: "Montserrat", sans-serif;
     font-size: 12px;
     font-weight: 500;
-
     line-height: 1.65;
-
     color: #443a30;
 }
 
 
 .ornament {
     margin: 36px auto 0;
-
     font-family: serif;
     font-size: 27px;
-
     color: #b8914b;
-
     transform: scaleX(1.4);
 }
 
@@ -801,29 +649,27 @@ body{
 
 .rsvp-section {
     width: 100%;
-
     text-align: left;
 }
 
 
 .rsvp-section h2 {
     text-align: center;
-
     margin-bottom: 13px;
+}
+
+.icon {
+    width: 200px;
 }
 
 
 .rsvp-subtitle {
-    margin: 0 0 28px;
-
+    margin: 0 0 50px;
     text-align: center;
-
     font-family: "Montserrat", sans-serif;
-    font-size: 11px;
+    font-size: 1.3rem;
     font-weight: 500;
-
     line-height: 1.55;
-
     color: #443a30;
 }
 
@@ -837,38 +683,31 @@ body{
     margin-bottom: 21px;
 }
 
-
 .form-group > label:first-child {
     display: block;
-
     margin-bottom: 10px;
-
     font-family: "Montserrat", sans-serif;
-    font-size: 11px;
+    font-size: 1.2rem;
     font-weight: 500;
-
     line-height: 1.45;
-
     color: #4a4036;
+}
+
+.form-group label{
+    font-size: 1.1rem;
 }
 
 
 .form-group input[type="text"] {
     width: 100%;
     height: 31px;
-
     padding: 3px 2px;
-
     border: none;
     border-bottom: 1px solid #574d43;
-
     background: transparent;
-
     outline: none;
-
     font-family: "Montserrat", sans-serif;
-    font-size: 12px;
-
+    font-size: 1.2rem;
     color: #33281f;
 }
 
@@ -883,9 +722,7 @@ body{
 .form-divider {
     width: 100%;
     height: 1px;
-
     margin: 22px 0 19px;
-
     background: #5b5045;
 }
 
@@ -896,16 +733,11 @@ body{
 .radio-label {
     display: flex;
     align-items: center;
-
     gap: 6px;
-
     margin-bottom: 5px;
-
     font-family: "Montserrat", sans-serif;
     font-size: 10px;
-
     color: #5c5147;
-
     cursor: pointer;
 }
 
@@ -913,16 +745,11 @@ body{
 .checkbox-label input,
 .radio-label input {
     appearance: none;
-
     width: 11px;
     height: 11px;
-
     margin: 0;
-
     border: 1px solid #70665c;
-
     background: transparent;
-
     cursor: pointer;
 }
 
@@ -935,39 +762,29 @@ body{
 .checkbox-label input:checked,
 .radio-label input:checked {
     position: relative;
-
     border-color: #b8914b;
 }
 
 
 .checkbox-label input:checked::after {
     content: "";
-
     position: absolute;
-
     width: 5px;
     height: 5px;
-
     left: 2px;
     top: 2px;
-
     background: #b8914b;
 }
 
 
 .radio-label input:checked::after {
     content: "";
-
     position: absolute;
-
     width: 5px;
     height: 5px;
-
     left: 2px;
     top: 2px;
-
     border-radius: 50%;
-
     background: #b8914b;
 }
 
@@ -978,25 +795,17 @@ body{
 
 .submit-btn {
     display: block;
-
-    width: 125px;
-    height: 31px;
-
-    margin: 0 auto;
-
+    width: 200px;
+    height: 50px;
+    margin: 40px auto;
     border: none;
-    border-radius: 20px;
-
+    border-radius: 30px;
     background: #bd934b;
-
-    color: #382c20;
-
+    color: #fff;
     font-family: "Montserrat", sans-serif;
-    font-size: 11px;
+    font-size: 1rem;
     font-weight: 500;
-
     cursor: pointer;
-
     transition: all .25s ease;
 }
 
@@ -1030,43 +839,146 @@ body{
 }
 
 
-/* =========================
-   MOBILE
-========================= */
 
-/* @media (max-width: 390px) {
 
-    .section4 {
-        padding: 35px 20px 55px;
+
+@media (max-width: 768px) {
+    /* section 1 */
+    .section1 {
+        background-image: url("invito_wedding1.jpg");
     }
 
-    .count-item {
-        min-width: 57px;
+    /* section 3*/
+    .welcome-section {
+        padding-top: 60px;
     }
-
-    .count-item span {
-        font-size: 26px;
+    .welcome-title {
+        font-size: 30px;
     }
-
-    .countdown {
-        gap: 5px;
+    .welcome-text {
+        font-size: 16px;
     }
-
-    .countdown-title {
+    .welcome-image {
+        width: 80%;
+    }
+    .welcome-date {
+        font-size: 21px;
+        margin-top: 70px;
+    }
+    .car-content h1 {
+        font-size: 38px;
+    }
+    .subtitle {
+        font-size: 16px;
+    }
+    .event h2 {
+        font-size: 23px;
+    }
+    .event p {
         font-size: 15px;
     }
-
-    .invitation-section h2,
-    .rsvp-section h2 {
-        font-size: 23px;
+    .church_image, .location_image {
+        width: 235px;
+    }
+    .car {
+        width: 435px;
+        max-width: 85vw;
+        left: 50%;
+        top: 50%;
     }
 }
 
-
-@media (min-width: 768px) {
-
-    .section4 {
-        padding-top: 55px;
+@media (max-width: 500px) {
+    /* section 1 */
+    .couple_names {
+        font-size: 2.25rem;
     }
-} */
 
+    .save-date {
+        font-size: 3rem;
+        line-height: 3.75rem;
+    }
+
+    .section1__month, .section1__year {
+        width: 6.5rem;
+    }
+
+    .section1__month p, .section1__year p {
+        font-size: 1.5rem;
+        line-height: 1.5;
+    }
+
+    .section1__day {
+        font-size: 4rem;
+        line-height: 4rem;
+    }
+
+    /* section 2 */
+    .section2__title, .section4__title {
+        font-size: 1.45rem;
+    }
+
+    .section2__text, .section4__text {
+        width: 290px;
+        font-size: 0.9rem;
+    }
+
+    .section2__calendar {
+        margin-top: 2.5rem;
+    }
+
+    .section2__calendar-title {
+        font-size: 1.5rem;
+    }
+
+    .section2__image-wrapper {
+        margin-top: 3.8rem;
+        width: 250px;
+    }
+
+    .section2__image-back {
+        width: 220px;
+        height: 320px;
+    }
+
+    .section2__image {
+        width: 250px;
+        height: 320px;
+    }
+
+    .w-35 {
+        font-size: 0.9rem;
+    }
+
+    .w-40 {
+        font-size: 1.1rem;
+    }
+
+    .section2__days .active b {
+        font-size: 1.4rem;
+    }
+
+    /* section 3*/
+    .car {
+        width: 470px;
+        max-width: 470px;
+        top: 38%;
+    }
+
+     /* section 4*/
+    .count-item span {
+        font-size: 1.8rem;
+    }
+
+    .rsvp-section {
+        max-width: 320px;
+    }
+
+    .icon {
+        width: 100px;
+    }
+
+    .form-group > label:first-child {
+        font-size: 1.1rem;
+    }
+}
