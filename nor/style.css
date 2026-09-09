@@ -239,7 +239,13 @@ body{
     position: relative;
     width: 100%;
     margin: 60px 0;
-    background: #fff;
+    background:
+      radial-gradient(
+          ellipse at 50% 20%,
+          rgba(255, 255, 255, 0.95) 0%,
+          rgba(247, 245, 238, 0.92) 45%,
+          rgba(239, 237, 228, 0.88) 100%
+      );
     overflow: hidden;
     display: flex;
     justify-content: center;
