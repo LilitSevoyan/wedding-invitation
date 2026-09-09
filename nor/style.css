@@ -254,6 +254,10 @@ body{
     padding-top: 0.5rem;
 }
 
+.section4__content {
+    margin-top: 60px;
+}
+
 .section2__title, .section4__title {
     margin: 0;
     font-family: "YesevaOne", sans-serif;
@@ -514,7 +518,6 @@ body{
 .section4 {
     position: relative;
     width: 100%;
-    margin: 60px 0 0;
     background:
       radial-gradient(
           ellipse at 50% 20%,
