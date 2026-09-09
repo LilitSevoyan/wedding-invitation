@@ -199,21 +199,9 @@
                 <form id="weddingForm">
                     <div class="form-group">
                         <label>
-                            Նշեք Ձեր և հրավիրված անձանց<br>
-                            անուն/ազգանունը
+                            Նշեք Ձեր անուն/ազգանունը
                         </label>
-                        <input type="text" name="guests">
-                    </div>
-                    <div class="form-group">
-                        <label>Ո՞վ եք հրավիրված</label>
-                        <label class="checkbox-label">
-                            <input type="checkbox" name="guest_type" value="միայնակ">
-                            <span>Միայնակ</span>
-                        </label>
-                        <label class="checkbox-label">
-                            <input type="checkbox" name="guest_type" value="ընկերոջ հետ">
-                            <span>Ընկերոջ հետ</span>
-                        </label>
+                        <input type="text" name="guests" />
                     </div>
                     <div class="form-group">
                         <label>
@@ -226,14 +214,25 @@
                         </label>
                         <label class="radio-label">
                             <input type="radio" name="attendance" value="Ցավոք ոչ">
-                            <span>Ցավոք ոչ</span>
+                            <span>Ցավոք, չեմ կարողանա</span>
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label> Ու՞մ կողմից եք հրավիրված</label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="guest_name" value="Արթուր">
+                            <span>Արթուր</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="guest_name" value="Լիլիթ">
+                            <span>Լիլիթ</span>
                         </label>
                     </div>
                     <div class="form-group">
                         <label>
-                            Գրեք Ձեր նախընտրած երգը
+                            Հյուրերի քանակը
                         </label>
-                        <input type="text" name="song">
+                        <input type="text" name="count">
                     </div>
                     <button type="submit" class="submit-btn">
                         Ուղարկել
