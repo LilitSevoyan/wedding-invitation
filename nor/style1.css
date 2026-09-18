@@ -1,0 +1,194 @@
+@media (max-width: 500px) {
+
+    .section4 {
+        padding: 55px 22px 35px;
+    }
+
+
+    .section4__content {
+        max-width: 100%;
+    }
+
+
+    /* COUNTDOWN */
+
+    .countdown-section {
+        margin-bottom: 55px;
+    }
+
+
+    .countdown-title {
+        margin-bottom: 25px;
+
+        font-size: 12px;
+        letter-spacing: 1.3px;
+    }
+
+
+    .countdown {
+        width: 100%;
+        gap: 3px;
+    }
+
+
+    .count-item {
+        min-width: 0;
+        flex: 1;
+    }
+
+
+    .count-item span {
+        font-size: 27px;
+        letter-spacing: -0.5px;
+    }
+
+
+    .count-item small {
+        margin-top: 9px;
+
+        font-size: 9px;
+        letter-spacing: 0.3px;
+    }
+
+
+    .separator {
+        font-size: 22px;
+        margin-top: -20px;
+    }
+
+
+    /* INVITATION */
+
+    .section4__ornament {
+        margin-bottom: 17px;
+        font-size: 16px;
+        letter-spacing: 5px;
+    }
+
+
+    .section4__title,
+    .rsvp-section h2 {
+        font-size: 29px;
+    }
+
+
+    .section4__text {
+        max-width: 300px;
+
+        margin-top: 22px;
+
+        font-size: 11px;
+        line-height: 1.9;
+    }
+
+
+    .icon {
+        width: 95px;
+        margin-top: 28px;
+    }
+
+
+    /* DIVIDER */
+
+    .section4__divider {
+        max-width: 280px;
+        gap: 12px;
+        margin-bottom: 45px;
+    }
+
+
+    .section4__divider b {
+        font-size: 18px;
+    }
+
+
+    /* RSVP */
+
+    .rsvp-section {
+        max-width: 100%;
+    }
+
+
+    .rsvp-section h2 {
+        margin-bottom: 15px;
+    }
+
+
+    .rsvp-subtitle {
+        margin-bottom: 40px;
+
+        font-size: 11px;
+        line-height: 1.8;
+    }
+
+
+    .form-group {
+        margin-bottom: 25px;
+    }
+
+
+    .form-group > label:first-child {
+        margin-bottom: 11px;
+        font-size: 11px;
+    }
+
+
+    .form-group input[type="text"] {
+        height: 36px;
+        font-size: 12px;
+    }
+
+
+    .checkbox-label,
+    .radio-label {
+        gap: 9px;
+        margin-bottom: 10px;
+        font-size: 11px;
+    }
+
+
+    .checkbox-label input,
+    .radio-label input {
+        width: 14px;
+        height: 14px;
+    }
+
+
+    .checkbox-label input:checked::after,
+    .radio-label input:checked::after {
+        width: 6px;
+        height: 6px;
+
+        top: 3px;
+        left: 3px;
+    }
+
+
+    .submit-btn {
+        width: 180px;
+        height: 47px;
+
+        margin-top: 38px;
+
+        font-size: 12px;
+    }
+
+
+    /* BOTTOM */
+
+    .bottom-ornament {
+        margin-top: 25px;
+        gap: 10px;
+    }
+
+
+    .bottom-ornament span {
+        max-width: 70px;
+    }
+
+
+    .bottom-ornament img {
+        width: 48px;
+    }
+
+}
