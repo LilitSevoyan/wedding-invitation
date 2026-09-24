@@ -271,11 +271,23 @@ body{
     font-weight: 400;
     line-height: 1.3;
     text-align: center;
-     color: #302117;
+    color: #302117;
 }
 
-.section2__text {
-    width: 330px;
+.animate-on-scroll {
+    opacity: 0;
+}
+
+.section2__title.show{
+    animation: textAppear 1.2s ease-out 0.2s forwards;
+}
+
+.section2__calendar-title.show{
+    animation: textAppear 1.2s ease-out 0.4s forwards;
+}
+
+/* .section2__text {
+    max-width: 500px;
     margin: 1.7rem 0 0;
     font-family: "YesevaOne", sans-serif;
     font-size: 1.2rem;
@@ -283,6 +295,19 @@ body{
     line-height: 1.7;
     text-align: center;
     color: #444;
+} */
+
+.section2__text,
+.section4__text {
+    width: 100%;
+    max-width: 400px;
+    margin: 25px 0 0;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.9;
+    text-align: center;
+    color: #66584d;
 }
 
 .section2__calendar {
@@ -293,8 +318,8 @@ body{
 }
 
 .section2__calendar-title {
-    font-family: "YesevaOne", sans-serif;
-    font-size: 1.65rem;
+    font-family: "YesevaOne", serif;
+    font-size: 1.85rem;
     line-height: 1.2;
     color: #333;
     margin-top: 1.5rem;
@@ -309,17 +334,17 @@ body{
     gap: 1.3rem;
 }
 
-.w-35 {
-    width: 35px;
-    height: 35px;
-    font-size: 1rem;
+.w-45 {
+    width: 45px;
+    height: 45px;
+    font-size: 1.2rem;
     border: 1px solid #ded9d57d;
 }
 
-.w-40 {
-    width: 40px;
-    height: 40px;
-    font-size: 1.2rem;
+.w-50 {
+    width: 50px;
+    height: 50px;
+    font-size: 1.4rem;
     border: 1px solid #ded9d5;
 }
 
@@ -334,8 +359,8 @@ body{
 }
 
 .section2__days .active {
-    width: 44px;
-    height: 51px;
+    width: 54px;
+    height: 61px;
     position: relative;
     display: flex;
     align-items: center;
@@ -345,8 +370,8 @@ body{
 
 .section2__days .active svg {
     position: absolute;
-    width: 55px;
-    height: 65px;
+    width: 65px;
+    height: 75px;
     top: -6px;
     left: -6px;
     fill: #C0B0A0;
@@ -356,7 +381,7 @@ body{
     position: relative;
     z-index: 2;
     color: #fff;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     font-weight: normal;
 }
 
@@ -375,8 +400,31 @@ body{
     left: 14px;
     background: #8a8c8a57;
     border-radius: 12px;
-    transform: rotate(-15deg);
+    /* transform: rotate(-15deg); */
+    opacity: 0;
 }
+
+.section2__image-back.show {
+    animation: rotateAppear 1.2s ease-out forwards;
+}
+
+@keyframes rotateAppear {
+    from {
+        opacity: 0;
+        transform: rotate(10deg) scale(0.95);
+    }
+
+    70% {
+        transform: rotate(-18deg) scale(1.02);
+    }
+
+    to {
+        opacity: 1;
+        transform: rotate(-15deg) scale(1);
+    }
+}
+
+
 
 .section2__image {
     position: absolute;
@@ -387,6 +435,27 @@ body{
     object-fit: cover;
     border-radius: 14px;
     display: block;
+    opacity: 0;
+}
+
+.section2__image.show {
+    animation: rotateReversAppear 1.2s ease-out forwards;
+}
+
+@keyframes rotateReversAppear {
+    from {
+        opacity: 0;
+        transform: rotate(-8deg) scale(0.95);
+    }
+
+    70% {
+        transform: rotate(-4deg) scale(1.02);
+    }
+
+    to {
+        opacity: 1;
+        transform: rotate(0deg) scale(1);
+    }
 }
 
 /* =========================
@@ -623,7 +692,7 @@ body{
     letter-spacing: 8px;
 }
 
-.section4__text {
+/* .section4__text {
     width: 100%;
     max-width: 400px;
     margin: 25px 0 0;
@@ -633,7 +702,8 @@ body{
     line-height: 1.9;
     text-align: center;
     color: #66584d;
-}
+} */
+
 
 .icon {
     width: 125px;
@@ -869,7 +939,25 @@ body{
 }
 
 
+.wedding-title {
+    font-family: "SloopScriptMediumOne", cursive;
+    font-weight: 400;
+    line-height: 1.15;
+    text-align: center;
+    color: #000;
+    letter-spacing: 1px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+    margin: 65px 0 0px;
+}
 
+.wedding-title .first-line {
+    font-size: 2.6rem;
+}
+
+.wedding-title .second-line {
+    font-size: 2.4rem;
+    margin-top: 5px;
+}
 
 
 @media (max-width: 768px) {
