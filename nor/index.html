@@ -275,6 +275,15 @@
             
         </div>
     </section>
+
+    <audio id="weddingMusic" loop>
+        <source src="wedding-song.mp3" type="audio/mpeg">
+    </audio>
+    
+    <button type="button" id="musicButton" class="music-button">
+        ♫
+    </button>
+
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="mail.js"></script>
     
@@ -424,6 +433,50 @@
         elements.forEach((element) => {
             observer.observe(element)
         })
+
+        // music
+const music = document.getElementById("weddingMusic");
+const musicButton = document.getElementById("musicButton");
+
+// Երաժշտությունը միացնելու ֆունկցիա
+function startMusic() {
+    music.play()
+        .then(() => {
+            musicButton.classList.add("playing");
+        })
+        .catch(() => {
+            console.log("Autoplay blocked");
+        });
+}
+
+// Էջը բացվելիս փորձել միացնել
+window.addEventListener("load", () => {
+    startMusic();
+});
+
+// Եթե browser-ը արգելել է autoplay-ը,
+// առաջին interaction-ից հետո միացնել
+function enableMusic() {
+    if (music.paused) {
+        startMusic();
+    }
+}
+
+document.addEventListener("click", enableMusic, { once: true });
+document.addEventListener("touchstart", enableMusic, { once: true });
+document.addEventListener("scroll", enableMusic, { once: true });
+
+// Կոճակով անջատել / միացնել
+musicButton.addEventListener("click", (e) => {
+    e.stopPropagation();
+
+    if (music.paused) {
+        startMusic();
+    } else {
+        music.pause();
+        musicButton.classList.remove("playing");
+    }
+});
         
     </script>
     

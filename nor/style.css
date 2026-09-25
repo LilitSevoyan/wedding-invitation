@@ -986,6 +986,22 @@ body{
     margin-top: 5px;
 }
 
+/* music */
+.music-button {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background: #c59a52;
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+    z-index: 9999;
+}
+
 
 @media (max-width: 768px) {
     /* section 1 */
@@ -1058,6 +1074,14 @@ body{
 
     .wedding-title .second-line {
         font-size: 2.2rem;
+    }
+
+    .music-button {
+        right: 15px;
+        bottom: 15px;
+        width: 45px;
+        height: 45px;
+        font-size: 20px;
     }
 }
 
