@@ -283,7 +283,7 @@ body{
 }
 
 .section2__calendar-title.show{
-    animation: textAppear 1.2s ease-out 0.6s forwards;
+    animation: textAppear 1.2s ease-out 0.4s forwards;
 }
 
 /* .section2__text {
@@ -1051,6 +1051,14 @@ body{
         font-size: 3rem;
         margin-top: 4px;
     }
+
+    .wedding-title .first-line {
+        font-size: 2.4rem;
+    }
+
+    .wedding-title .second-line {
+        font-size: 2.2rem;
+    }
 }
 
 @media (max-width: 500px) {
@@ -1182,6 +1190,14 @@ body{
 
     .section4__ornament {
         margin-bottom: 25px;
+    }
+
+    .wedding-title .first-line {
+        font-size: 2.2rem;
+    }
+
+    .wedding-title .second-line {
+        font-size: 2rem;
     }
 }
 
