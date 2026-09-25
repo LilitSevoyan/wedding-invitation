@@ -283,7 +283,7 @@ body{
 }
 
 .section2__calendar-title.show{
-    animation: textAppear 1.2s ease-out 0.4s forwards;
+    animation: textAppear 1.2s ease-out 0.6s forwards;
 }
 
 /* .section2__text {
@@ -405,7 +405,7 @@ body{
 }
 
 .section2__image-back.show {
-    animation: rotateAppear 1.2s ease-out forwards;
+    animation: rotateAppear 1.2s ease-out 0.6s forwards;
 }
 
 @keyframes rotateAppear {
@@ -619,7 +619,7 @@ body{
 
 .countdown-section {
     width: 100%;
-    margin-bottom: 60px;
+    margin-bottom: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -638,12 +638,12 @@ body{
 .countdown {
     display: flex;
     justify-content: center;
-    align-items: center;
-    gap: 12px;
+    align-items: flex-start;
+    gap: 10px;
 }
 
 .count-item {
-    min-width: 62px;
+    min-width: 55px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -656,6 +656,7 @@ body{
     font-weight: 400;
     line-height: 1;
     color: #30251c;
+    text-align: center;
 }
 
 .count-item small {
@@ -665,27 +666,28 @@ body{
     font-weight: 500;
     letter-spacing: 1px;
     color: #958778;
+    text-align: center;
 }
 
 .separator { 
     font-family: "Montserrat", sans-serif;
-    font-size: 3.6rem;
+    font-size: 3rem;
     font-weight: 300;
-    line-height: 1; 
-    margin-top: -45px;
+    line-height: 1;
+    margin-top: 5px;
     color: #b8914b;
 }
 
 .invitation-section {
     width: 100%;
-    margin-bottom: 45px;
+    margin-bottom: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .section4__ornament {
-    margin-bottom: 22px;
+    margin-bottom: 35px;
     font-family: "YesevaOne", serif;
     font-size: 20px;
     color: #b8914b;
@@ -708,7 +710,6 @@ body{
 .icon {
     width: 125px;
     height: auto;
-    margin-top: 35px;
 }
 
 .section4__divider {
@@ -749,7 +750,7 @@ body{
 
 
 .invitation-section p {
-    margin: 0 auto 19px;
+    margin: 0 auto 20px;
     font-family: "Montserrat", sans-serif;
     font-size: 1rem;
     font-weight: 500;
@@ -947,7 +948,7 @@ body{
     color: #000;
     letter-spacing: 1px;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
-    margin: 65px 0 0px;
+    margin: 65px 0 40px;
 }
 
 .wedding-title .first-line {
@@ -1003,6 +1004,26 @@ body{
         max-width: 85vw;
         left: 50%;
         top: 50%;
+    }
+    /* section4 */
+
+    .count-item {
+        min-width: 52px;
+    }
+
+    .count-item span {
+        font-size: 3.2rem;
+    }
+
+    .count-item small {
+        margin-top: 10px;
+        font-size: 1rem;
+        letter-spacing: 0.5px;
+    }
+
+    .separator {
+        font-size: 3rem;
+        margin-top: 4px;
     }
 }
 
@@ -1085,11 +1106,7 @@ body{
 
      /* section 4*/
     .countdown-title {
-        font-size: 1.4rem;
-    }
-
-    .count-item span {
-        font-size: 1.6rem;
+        font-size: 1.1rem;
     }
 
     .rsvp-section {
@@ -1112,13 +1129,33 @@ body{
         font-size: 1.1rem;
     }
 
-    .separator {
-        font-size: 2.3rem;
-        margin-top: -38px;
+    /* section 4 */
+
+    .count-item {
+        min-width: 45px;
     }
 
-    .countdown { 
-        gap: 0;
+    .count-item span {
+        font-size: 2.4rem;
+    }
+
+    .count-item small {
+        margin-top: 8px;
+        font-size: 0.8rem;
+        letter-spacing: 0;
+    }
+
+    .separator {
+        font-size: 2.4rem;
+        margin-top: 2px;
+    }
+
+    .countdown-section {
+        margin-bottom: 40px;
+    }
+    
+    .section4__ornament {
+        margin-bottom: 25px;
     }
 }
 
