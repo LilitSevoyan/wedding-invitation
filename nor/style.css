@@ -623,7 +623,11 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    opacity: 0;
+    transform: translateY(80px);
 }
+
+
 
 .countdown-title {
     margin-bottom: 30px;
@@ -684,6 +688,28 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    opacity: 0;
+    transform: translateY(80px);
+}
+
+.invitation-section.show,
+.countdown-section.show {
+    opacity: 1;
+    transform: translateY(80px);
+    animation: textFromBottom 1.2s ease-out forwards;
+    animation-delay: 0.3s;
+}
+
+@keyframes textFromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(80px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .section4__ornament {
@@ -1153,7 +1179,7 @@ body{
     .countdown-section {
         margin-bottom: 40px;
     }
-    
+
     .section4__ornament {
         margin-bottom: 25px;
     }
