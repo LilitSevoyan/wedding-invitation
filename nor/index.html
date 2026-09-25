@@ -471,6 +471,8 @@ musicButton.addEventListener("click", (e) => {
     e.stopPropagation();
 
     if (music.paused) {
+        music.currentTime = 46;
+        music.play();
         startMusic();
     } else {
         music.pause();
