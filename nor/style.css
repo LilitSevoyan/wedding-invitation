@@ -64,7 +64,7 @@ body{
     height: calc(var(--vh, 1vh) * 100);
     color: white;
     overflow: hidden;
-    background: url("invito_wedding.jpg") center center / cover no-repeat;
+    background: url("21.jpg") center center / cover no-repeat;
 }
 
 .section1::after {
