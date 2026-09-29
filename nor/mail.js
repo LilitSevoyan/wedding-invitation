@@ -123,7 +123,7 @@ document.addEventListener('DOMContentLoaded', function () {
             form.reset()
 
             submitBtn.disabled = false
-            submitBtn.textContent = 'Պատասխանել'
+            submitBtn.textContent = 'Ուղարկել'
 
             Swal.fire({
                 icon: 'success',
