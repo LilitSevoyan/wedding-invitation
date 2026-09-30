@@ -1,261 +1,302 @@
 <!DOCTYPE html>
-<html lang="hy">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Scratch Heart</title>
-
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-body{
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background:#e9e9ed;
-    font-family: "Segoe UI", sans-serif;
-}
-
-.container{
-    width:360px;
-    height:700px;
-    background:#fff;
-    border-radius:40px;
-    text-align:center;
-    padding-top:60px;
-    position:relative;
-    overflow:hidden;
-}
-
-.title{
-    font-size:28px;
-    letter-spacing:2px;
-    margin-bottom:40px;
-
-    background: linear-gradient(
-        135deg,
-        #b8860b 0%,
-        #d4af37 40%,
-        #f5e27a 60%,
-        #c99228 100%
-    );
-
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.heart-wrapper{
-    position:relative;
-    width:350px;
-    height:400px;
-    margin:0 auto;
-}
-
-canvas{
-    width:100%;
-    height:100%;
-    position:absolute;
-    left:0;
-    top:0;
-    cursor:pointer;
-}
-
-.hidden-text{
-    position:absolute;
-    top:45%;
-    left:50%;
-    transform:translate(-50%,-50%);
-    text-align:center;
-    font-size:22px;
-    letter-spacing:3px;
-    color:#333;
-}
-
-.names{
-    position:absolute;
-    bottom:100px;
-    width:100%;
-    font-size:18px;
-    color:#666;
-    letter-spacing:2px;
-}
-.names p{
-    font-size:14px; 
-    margin-top: 25px;
-    color: #d3d3d3;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
-<div class="container">
-
-    <!-- <div class="title">
-        ՀԱՐՍԱՆԵԿԱՆ ՀՐԱՎԻՐԱՏՈՄՍ
-    </div> -->
-
-    <div class="heart-wrapper">
-
-        <div class="hidden-text">
-            15.11.26 <br>
-            <strong>SAVE<br>THE DATE</strong>
+    <section class="section1 wedding-hero">
+        <div class="section1_content">
+            <div class="couple_names"> Արթուր & Լիլիթ </div>
+            <div class="heart-line">
+                <span></span>
+                <img src="./heart.svg" width="20" height="18" class="section1__divider-heart-image" alt="Heart">
+                <span></span>
+            </div>
+            <div class="section1__footer">
+                <p class="save-date">
+                    Save the date
+                </p>
+                <div class="section1__date">
+                    <div class="section1__month">
+                        <p>NOV</p>
+                    </div>
+                    <p class="section1__day">15</p>
+                    <div class="section1__year">
+                        <p>2026</p>
+                    </div>
+                </div>
+             </div>
         </div>
+    </section>
+    <section class="section2">
+        <div class="section2__content">
+            <h2 class="section2__title animate-on-scroll"> Հարգելի՛ հյուրեր </h2>
+            <p class="section2__text">
+                <!-- Մոտենում է մեր կյանքի ամենասպասված
+                ու հիշարժան պահերից մեկը։ 
+                Մենք ընտանիք ենք կազմում և մեծ
+                սիրով հրավիրում ենք 
+                <br>
+                Ձեզ կիսելու մերերջանկություը։
+                <br>
+                Ձեր ներկայությունը մեր կողքին շատ
+                կարևոր է։ -->
 
-        <canvas id="scratchCanvas"></canvas>
+                <!-- Մոտենում է մեր կյանքի ամենասպասված ու հիշարժան պահերից մեկը։ 
+                <br>
+                Մենք ընտանիք ենք կազմում և մեծ սիրով հրավիրում ենք 
+                Ձեզ՝ կիսելու մեր երջանկությունն ու կյանքի այս առանձնահատուկ օրը։
+                <br>
+                Ձեր ներկայությունը մեր ամենաերջանիկ օրը կդարձնի ավելի ջերմ, գեղեցիկ և հիշարժան։ -->
+                Մեր կյանքի ամենագեղեցիկ էջը շուտով կսկսվի նոր ու լուսավոր պատմությամբ։ 
+                </br>
+                Սիրով, հավատով և անսահման երջանկությամբ մենք միավորում ենք մեր սրտերն ու ճանապարհները՝ կազմելով մեր փոքրիկ ընտանիքը։
+                </br>
+                Այս կարևոր ու նվիրական օրը ցանկանում ենք կիսել մեզ համար թանկ ու հարազատ մարդկանց հետ։
+                </br>
+                Սիրով հրավիրում ենք Ձեզ՝ ներկա լինելու մեր սիրո տոնին և մեզ հետ միասին կիսելու այն երջանկությունը, որը կդառնա մեր կյանքի ամենաթանկ հիշողություններից մեկը։
+                </br>     
+                Ձեր ներկայությունը մեր օրը կլցնի ջերմությամբ, սիրով և անմոռանալի հույզերով։
+            </p>
+            <div class="section2__calendar">
+                <div class="section2__calendar-title animate-on-scroll">
+                    ՆՈՅԵՄԲԵՐ 2026
+                </div>
+                <div class="section2__days">
+                    <span class="w-45">13</span>
+                    <span class="w-50">14</span>
+                    <span class="active">
+                        <svg viewBox="0 0 50 45">
+                            <path d="M25 45
+                            C22 42, 4 30, 2 17
+                            C0 7, 7 1, 15 1
+                            C20 1, 23 4, 25 8
+                            C27 4, 30 1, 35 1
+                            C43 1, 50 7, 48 17
+                            C46 30, 28 42, 25 45Z"/>
+                        </svg>
+                        <b>15</b>
+                    </span>
+                    <span class="w-50">16</span>
+                    <span class="w-45">17</span>
+                </div>
+            </div>
+            <div class="section2__image-wrapper">
+                <div class="section2__image-back animate-on-scroll"></div>
+                <img src="./23.JPG" alt="" class="section2__image animate-on-scroll">
+            </div>
+        </div>
+    </section>
+    <section class="car-scroll-section section3">
+        <div class="car-sticky">
+          <!-- TEXT -->
+          <div class="car-content">
+            <h1> ՕՐՎԱ ԾՐԱԳԻՐ </h1>
+            <p class="subtitle">
+              Ամեն ինչ, ինչ պետք է իմանաք
+            </p>
+            <div class="event">
+              <span class="heart"> ♥ </span>
+              <img src="zx.svg" class="event_image"/>
+              <h2>Հարսի Տուն</h2>
+              <p>
+                (Նոր Նորք, Գյուրջյան 58)
+              </p>
+              <span class="time">12:00</span>
+              <button class="btn_map"
+                onclick="window.open('https://www.google.com/maps/place/58+Gyurjyan+Street,+Yerevan+0056/@40.1896691,44.5578462,293m/data=!3m1!1e3!4m6!3m5!1s0x406abcca953f073b:0xc8c9e307497ff765!8m2!3d40.189825!4d44.5589095!16s%2Fg%2F11crrw8myl!5m2!1e2!1e4?entry=ttu&g_ep=EgoyMDI2MDgwOS4wIKXMDSoASAFQAw%3D%3D')">
+                Քարտեզ
+              </button>
+            </div>
+            <div class="event">
+              <span class="heart"> ♥ </span>
+              <img src="gayane_church.png" class="church_image" />
+              <h2>Պսակադրություն</h2>
+              <p>
+                <p>
+                  Պսակադրությունը կանցկացվի <br>
+                  <b>Սուրբ Գայանե</b> եկեղեցում <br>
+                  Արմավիրի մարզ, ք.Էջմիածին
+                </p>
+                <a href="" class="content-address">
+                  <p></p>
+                </a>
+              </p>
+              <span class="time">15:00</span>
+              <button class="btn_map"
+                onclick="window.open('https://www.google.com/maps/place/%D0%A6%D0%B5%D1%80%D0%BA%D0%BE%D0%B2%D1%8C+%D0%A1%D0%B2%D1%8F%D1%82%D0%BE%D0%B9+%D0%93%D0%B0%D1%8F%D0%BD%D1%8D/@40.1585763,44.2928462,957m/data=!3m1!1e3!4m14!1m7!3m6!1s0x406a952aa68c6009:0x8a692ec2c8be215a!2z0KbQtdGA0LrQvtCy0Ywg0KHQstGP0YLQvtC5INCT0LDRj9C90Y0!8m2!3d40.1575021!4d44.2918411!16s%2Fm%2F027140_!3m5!1s0x406a952aa68c6009:0x8a692ec2c8be215a!8m2!3d40.1575021!4d44.2918411!16s%2Fm%2F027140_!5m2!1e2!1e4?entry=ttu&g_ep=EgoyMDI2MDgwOS4wIKXMDSoASAFQAw%3D%3D')">
+                Քարտեզ
+              </button>
+            </div>
+            <div class="event">
+              <span class="heart"> ♥ </span>
+              <img src="nor_dvin1.png" class="location_image"/>
+              <h2> Հանդիսություն</h2>
+              <p>
+                <p>Տոնական խնջույքը կանցկացվի <br>
+                  <b>«Նոր Դվին»</b> ռեստորանում <br>
+                  (Արմավիրի մարզ, ք.Էջմիածին <br/> 
+                  Աշտարակի խճուղի, 1 շենք)
+                </p>
+                <span class="time">17:00</span>
+                <button class="btn_map"
+                  onclick="window.open('https://www.google.com/maps/place/%D0%9D%D0%BE%D1%80+%D0%94%D0%B2%D0%B8%D0%BD/@40.1777481,44.2902647,479m/data=!3m1!1e3!4m6!3m5!1s0x406a94eab4d0fb39:0x686139cd2968c37c!8m2!3d40.1782526!4d44.2915602!16s%2Fg%2F11f37g7dj6!5m1!1e2?entry=ttu&g_ep=EgoyMDI2MDkwMi4wIKXMDSoASAFQAw%3D%3D')">
+                  Քարտեզ
+                </button>
+              </p>
+            </div>
+          </div>
+          <!-- CAR -->
+          <img class="car" src="./car3.png" alt="White car">
+          <!-- car3 i salony aveli siruna -->
+        </div>
+    </section>
+    <section class="section4" id="wedding">
+        <div class="section4__content">
+            <!-- COUNTDOWN -->
+            <div class="countdown-section animate-on-scroll">
+                <div class="countdown-title">
+                    ՀԱՐՍԱՆԻՔԻՆ ՄՆԱՑԵԼ Է ...
+                </div>
+                <div class="countdown" id="countdown">
+                    <div class="count-item">
+                        <span id="days">00</span>
+                        <small>օր</small>
+                    </div>
+                    <span class="separator">:</span>
+                    <div class="count-item">
+                        <span id="hours">00</span>
+                        <small>ժամ</small>
+                    </div>
+                    <span class="separator">:</span>
+                    <div class="count-item">
+                        <span id="minutes">00</span>
+                        <small>րոպե</small>
+                    </div>
+                    <span class="separator">:</span>
+                    <div class="count-item">
+                        <span id="seconds">00</span>
+                        <small>վրկ</small>
+                    </div>
+                </div>
+            </div>
+             <!-- INVITATION -->
+            <div class="invitation-section animate-on-scroll">
+                <div class="section4__ornament">
+                    ✦
+                </div>
+                <h2 class="section4__title">
+                    Դետալներ
+                </h2>
+                <p class="section4__text">
+                    <!-- Ձեր ներկայությունը մեր<br>
+                    հարսանիքին մեզ համար կլինի<br>
+                    ամենաթանկ նվերը, իսկ Ձեր<br>
+                    ժպիտը՝ օրվա ամենագեղեցիկ շողը։ -->
+                    Ձեր ներկայությունը մեր հարսանիքին
+                    մեզ համար կլինի ամենաթանկ նվերը,
+                    իսկ Ձեր ժպիտը՝ այդ օրվա ամենաջերմ ու գեղեցիկ զարդը։
+                </p>
+                <p class="section4__text">
+                    <!-- Թույլ տանք, որ այդ օրը սպիտակ<br>
+                    զգեստով լինի միայն<br>
+                    հարսնացուն 💍 -->
+                    Կցանկանայինք, որ մեր սիրո տոնն ունենա
+                    իր յուրահատուկ փայլն ու հմայքը,
+                    ուստի խնդրում ենք՝ այդ օրը սպիտակ գույնը
+                    թողնենք միայն հարսնացուի համար։ 🤍💍
+                </p>
+                <img src="icon.png" alt="icon" class="icon">
+            </div>
+            <!-- DIVIDER -->
+            <!-- <div class="section4__divider">
+                <span></span>
+                <b>♡</b>
+                <span></span>
+            </div> -->
+            <!-- RSVP -->
+            <div class="rsvp-section">
+                <h2>Հաստատեք</h2>
+                <p class="rsvp-subtitle">
+                    Կսպասենք Ձեր պատասխանին<br>
+                    մինչև <strong>հոկտեմբերի 20-ը։</strong>
+                </p>
+                <form id="weddingForm">
+                    <div class="form-group">
+                        <label>
+                            Նշեք Ձեր անուն/ազգանունը
+                        </label>
+                        <input type="text" name="guests" required />
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            Կկարողանա՞ք ներկա գտնվել<br>
+                            միջոցառմանը
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="attendance" value="Այո, հաճույքով" required>
+                            <span>Այո, հաճույքով</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="attendance" value="Ցավոք, չեմ կարողանա">
+                            <span>Ցավոք, չեմ կարողանա</span>
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label> Ու՞մ կողմից եք հրավիրված</label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="guest_name" value="Արթուր">
+                            <span>Արթուր</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="guest_name" value="Լիլիթ">
+                            <span>Լիլիթ</span>
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            Հյուրերի քանակը
+                        </label>
+                        <input type="text" name="count" required>
+                    </div>
+                    <button type="submit" class="submit-btn">
+                        Ուղարկել
+                    </button>
+                </form>
+            </div>
+            <div class="wedding-title">
+                <div class="first-line">Սիրով՝</div>
+                <div class="second-line">Արթուր և Լիլիթ</div>
+            </div>
+            <img src="icon.png" alt="icon" class="icon"/>
+            
+        </div>
+    </section>
 
-    </div>
-
-    <!-- <div class="names">
-        ԱՐԹՈՒՐ & ԼԻԼԻԹ
-        <p>ՋՆՋԵՔ ՍԻՐՏԸ ⬆</p>
-    </div> -->
-
-</div>
-
-<script>
-const canvas = document.getElementById("scratchCanvas");
-const ctx = canvas.getContext("2d");
-
-let isDrawing = false;
-
-function drawSparkles(x, y){
-
-    let count = 700;
-
-    for(let i = 0; i < count; i++){
-
-        // ֆիքսված անկանոն անկյուն
-        let angle = i * 2.399963; // golden angle ռադիաններով
-
-        // անկանոն բայց հաստատուն ուժ
-        let power = (i * i % 97) * 2;
-
-        // աղավաղում deterministic
-        let distortionX = Math.sin(i * 12.9898) * 30;
-        let distortionY = Math.cos(i * 78.233) * 30;
-
-        let sparkleX = x + Math.cos(angle) * power + distortionX;
-        let sparkleY = y + Math.sin(angle) * power + distortionY;
-
-        ctx.beginPath();
-        ctx.arc(sparkleX, sparkleY, 1, 0, Math.PI * 2);
-
-        ctx.fillStyle = "white";
-        ctx.fill();
-    }
-}
-
-/* ---------- Resize Canvas ---------- */
-function resizeCanvas(){
-    const rect = canvas.parentElement.getBoundingClientRect();
-
-    canvas.width = rect.width;
-    canvas.height = rect.height;
-
-    drawHeart();
-}
-
-window.addEventListener("resize", resizeCanvas);
-resizeCanvas();
-
-
-
-/* ---------- Draw Heart ---------- */
-function drawHeart(){
-
-    ctx.clearRect(0,0,canvas.width,canvas.height);
-
-    let w = canvas.width;
-    let h = canvas.height;
-
-    let gradient = ctx.createLinearGradient(120,0,w,h);
-    // gradient.addColorStop(0.8, "#c99228");   // շատ բաց ոսկեգույն
-    gradient.addColorStop(0.6, "#b8860b"); // gold
-    gradient.addColorStop(0.4, "#f5e27a"); // gold
-    gradient.addColorStop(0.2, "#f5e27a"); // gold
-    gradient.addColorStop(0, "#c99228"); // խոր ոսկեգույն
-
+    <audio id="weddingMusic" loop>
+        <source src="wedding-song.mp3" type="audio/mpeg">
+    </audio>
     
+    <button type="button" id="musicButton" class="music-button">
+        ♫
+           <!-- <svg viewBox="0 0 24 24" width="30" height="30" fill="none"
+               xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 18V5L20 3V16"
+                      stroke="white"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"/>
+                <circle cx="6" cy="18" r="3" stroke="white" stroke-width="2"/>
+                <circle cx="17" cy="16" r="3" stroke="white" stroke-width="2"/>
+            </svg> -->
+    </button>
 
-    ctx.fillStyle = gradient;
-
-    ctx.beginPath();
-
-    let x = w / 2;
-    let y = 220 * 0.45;
-    let size = w * 0.35;
-
-    ctx.moveTo(x, y);
-
-    ctx.bezierCurveTo(
-        x - size, y - size,
-        x - size * 2, y + size / 3,
-        x, y + size * 1.7
-    );
-
-    ctx.bezierCurveTo(
-        x + size * 2, y + size / 3,
-        x + size, y - size,
-        x, y
-    );
-
-    ctx.fill();
-    drawSparkles(x, y, size);
-}
-
-/* ---------- Scratch ---------- */
-function scratch(x,y){
-    ctx.globalCompositeOperation = "destination-out";
-
-    ctx.beginPath();
-    ctx.arc(x,y,20,0,Math.PI*2);
-    ctx.fill();
-}
-
-/* ---------- Mouse ---------- */
-canvas.addEventListener("mousedown", ()=> isDrawing = true);
-canvas.addEventListener("mouseup", ()=> isDrawing = false);
-canvas.addEventListener("mouseleave", ()=> isDrawing = false);
-
-canvas.addEventListener("mousemove", function(e){
-    if(!isDrawing) return;
-
-    const rect = canvas.getBoundingClientRect();
-
-    scratch(
-        e.clientX - rect.left,
-        e.clientY - rect.top
-    );
-});
-
-/* ---------- Mobile Touch ---------- */
-canvas.addEventListener("touchstart", function(e){
-    e.preventDefault();
-    isDrawing = true;
-});
-
-canvas.addEventListener("touchend", ()=> isDrawing = false);
-
-canvas.addEventListener("touchmove", function(e){
-    e.preventDefault();
-
-    if(!isDrawing) return;
-
-    const rect = canvas.getBoundingClientRect();
-    const touch = e.touches[0];
-
-    scratch(
-        touch.clientX - rect.left,
-        touch.clientY - rect.top
-    );
-});
-</script>
-
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="script.js"></script>
+    <script src="mail.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>

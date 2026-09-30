@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scratch Heart</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#e9e9ed;
+    font-family: "Segoe UI", sans-serif;
+}
+
+.container{
+    width:360px;
+    height:700px;
+    background:#fff;
+    border-radius:40px;
+    text-align:center;
+    padding-top:60px;
+    position:relative;
+    overflow:hidden;
+}
+
+.title{
+    font-size:28px;
+    letter-spacing:2px;
+    margin-bottom:40px;
+
+    background: linear-gradient(
+        135deg,
+        #b8860b 0%,
+        #d4af37 40%,
+        #f5e27a 60%,
+        #c99228 100%
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.heart-wrapper{
+    position:relative;
+    width:350px;
+    height:400px;
+    margin:0 auto;
+}
+
+canvas{
+    width:100%;
+    height:100%;
+    position:absolute;
+    left:0;
+    top:0;
+    cursor:pointer;
+}
+
+.hidden-text{
+    position:absolute;
+    top:45%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    text-align:center;
+    font-size:22px;
+    letter-spacing:3px;
+    color:#333;
+}
+
+.names{
+    position:absolute;
+    bottom:100px;
+    width:100%;
+    font-size:18px;
+    color:#666;
+    letter-spacing:2px;
+}
+.names p{
+    font-size:14px; 
+    margin-top: 25px;
+    color: #d3d3d3;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- <div class="title">
+        ՀԱՐՍԱՆԵԿԱՆ ՀՐԱՎԻՐԱՏՈՄՍ
+    </div> -->
+
+    <div class="heart-wrapper">
+
+        <div class="hidden-text">
+            15.11.26 <br>
+            <strong>SAVE<br>THE DATE</strong>
+        </div>
+
+        <canvas id="scratchCanvas"></canvas>
+
+    </div>
+
+    <!-- <div class="names">
+        ԱՐԹՈՒՐ & ԼԻԼԻԹ
+        <p>ՋՆՋԵՔ ՍԻՐՏԸ ⬆</p>
+    </div> -->
+
+</div>
+
+<script>
+const canvas = document.getElementById("scratchCanvas");
+const ctx = canvas.getContext("2d");
+
+let isDrawing = false;
+
+function drawSparkles(x, y){
+
+    let count = 700;
+
+    for(let i = 0; i < count; i++){
+
+        // ֆիքսված անկանոն անկյուն
+        let angle = i * 2.399963; // golden angle ռադիաններով
+
+        // անկանոն բայց հաստատուն ուժ
+        let power = (i * i % 97) * 2;
+
+        // աղավաղում deterministic
+        let distortionX = Math.sin(i * 12.9898) * 30;
+        let distortionY = Math.cos(i * 78.233) * 30;
+
+        let sparkleX = x + Math.cos(angle) * power + distortionX;
+        let sparkleY = y + Math.sin(angle) * power + distortionY;
+
+        ctx.beginPath();
+        ctx.arc(sparkleX, sparkleY, 1, 0, Math.PI * 2);
+
+        ctx.fillStyle = "white";
+        ctx.fill();
+    }
+}
+
+/* ---------- Resize Canvas ---------- */
+function resizeCanvas(){
+    const rect = canvas.parentElement.getBoundingClientRect();
+
+    canvas.width = rect.width;
+    canvas.height = rect.height;
+
+    drawHeart();
+}
+
+window.addEventListener("resize", resizeCanvas);
+resizeCanvas();
+
+
+
+/* ---------- Draw Heart ---------- */
+function drawHeart(){
+
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+
+    let w = canvas.width;
+    let h = canvas.height;
+
+    let gradient = ctx.createLinearGradient(120,0,w,h);
+    // gradient.addColorStop(0.8, "#c99228");   // շատ բաց ոսկեգույն
+    gradient.addColorStop(0.6, "#b8860b"); // gold
+    gradient.addColorStop(0.4, "#f5e27a"); // gold
+    gradient.addColorStop(0.2, "#f5e27a"); // gold
+    gradient.addColorStop(0, "#c99228"); // խոր ոսկեգույն
+
+    
+
+    ctx.fillStyle = gradient;
+
+    ctx.beginPath();
+
+    let x = w / 2;
+    let y = 220 * 0.45;
+    let size = w * 0.35;
+
+    ctx.moveTo(x, y);
+
+    ctx.bezierCurveTo(
+        x - size, y - size,
+        x - size * 2, y + size / 3,
+        x, y + size * 1.7
+    );
+
+    ctx.bezierCurveTo(
+        x + size * 2, y + size / 3,
+        x + size, y - size,
+        x, y
+    );
+
+    ctx.fill();
+    drawSparkles(x, y, size);
+}
+
+/* ---------- Scratch ---------- */
+function scratch(x,y){
+    ctx.globalCompositeOperation = "destination-out";
+
+    ctx.beginPath();
+    ctx.arc(x,y,20,0,Math.PI*2);
+    ctx.fill();
+}
+
+/* ---------- Mouse ---------- */
+canvas.addEventListener("mousedown", ()=> isDrawing = true);
+canvas.addEventListener("mouseup", ()=> isDrawing = false);
+canvas.addEventListener("mouseleave", ()=> isDrawing = false);
+
+canvas.addEventListener("mousemove", function(e){
+    if(!isDrawing) return;
+
+    const rect = canvas.getBoundingClientRect();
+
+    scratch(
+        e.clientX - rect.left,
+        e.clientY - rect.top
+    );
+});
+
+/* ---------- Mobile Touch ---------- */
+canvas.addEventListener("touchstart", function(e){
+    e.preventDefault();
+    isDrawing = true;
+});
+
+canvas.addEventListener("touchend", ()=> isDrawing = false);
+
+canvas.addEventListener("touchmove", function(e){
+    e.preventDefault();
+
+    if(!isDrawing) return;
+
+    const rect = canvas.getBoundingClientRect();
+    const touch = e.touches[0];
+
+    scratch(
+        touch.clientX - rect.left,
+        touch.clientY - rect.top
+    );
+});
+</script>
+
+</body>
+</html>
