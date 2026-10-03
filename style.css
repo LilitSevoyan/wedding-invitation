@@ -758,6 +758,13 @@ body{
     max-width: 500px;
 }
 
+.weddingImg {
+    width: 100%;
+    max-width: 500px; 
+    border-radius: 26px;
+    margin-bottom: 50px;
+}
+
 .invitation-section h2,
 .rsvp-section h2 {
     margin: 0 0 17px;
@@ -1075,6 +1082,13 @@ body{
         width: 45px;
         height: 45px;
         font-size: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .weddingImg {
+        max-width: 300px;
     }
 }
 
