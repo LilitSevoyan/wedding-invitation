@@ -151,7 +151,7 @@ window.addEventListener("load", () => {
 // առաջին interaction-ից հետո միացնել
 function enableMusic() {
     if (music.paused) {
-        music.currentTime = 45.5;
+        music.currentTime = 46;
         startMusic();
     }
 }
@@ -165,7 +165,7 @@ musicButton.addEventListener("click", (e) => {
     e.stopPropagation();
 
     if (music.paused) {
-        music.currentTime = 45.5;
+        music.currentTime = 46;
         startMusic();
     } else {
         music.pause();
