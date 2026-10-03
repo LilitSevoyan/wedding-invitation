@@ -162,13 +162,29 @@ document.addEventListener("scroll", enableMusic, { once: true });
 
 // Կոճակով անջատել / միացնել
 musicButton.addEventListener("click", (e) => {
-    e.stopPropagation();
+    e.stopPropagation()
 
     if (music.paused) {
-        music.currentTime = 46;
-        startMusic();
+        music.currentTime = 46
+        startMusic()
     } else {
-        music.pause();
-        musicButton.classList.remove("playing");
+        music.pause()
+        musicButton.classList.remove("playing")
     }
-});
+})
+
+// փակել inspect-ը
+
+document.addEventListener("contextmenu", function (e) {
+    e.preventDefault()
+})
+
+document.addEventListener("keydown", function (e) {
+    if (
+        e.key === "F12" ||
+        (e.ctrlKey && e.shiftKey && ["I", "J", "C"].includes(e.key.toUpperCase())) ||
+        (e.ctrlKey && e.key.toUpperCase() === "U")
+    ) {
+        e.preventDefault()
+    }
+})
