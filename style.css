@@ -64,7 +64,7 @@ body{
     height: calc(var(--vh, 1vh) * 100);
     color: white;
     overflow: hidden;
-    background: url("21.jpg") center center / cover no-repeat;
+    background: url("Artur_Lilit.jpg") center center / cover no-repeat;
 }
 
 .section1::after {
@@ -1006,7 +1006,7 @@ body{
 @media (max-width: 768px) {
     /* section 1 */
     .section1 {
-        background-image: url("test/0C7A0661.JPG");
+        background-image: url("Artur_Lilit(1).jpg");
     }
 
     /* section 3*/
